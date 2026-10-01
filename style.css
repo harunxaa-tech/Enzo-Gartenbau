@@ -174,3 +174,139 @@ body.modal-open .mobile-call{opacity:0;pointer-events:none}
   .service-grid{grid-template-columns:1fr}
   .service-card,.service-featured{min-height:190px}
 }
+
+/* Version 05 – responsive Feinschliff für Mobil, Tablet und Desktop */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{min-width:0}
+main,.site-header,.topbar,.site-footer,.section,.hero,.visual-break{width:100%}
+.wrap{width:min(1220px,calc(100% - clamp(32px,6vw,88px)));max-width:1220px}
+.header-inner,.hero-content,.intro-grid,.section-head,.service-grid,.collection-grid,.about-grid,.contact-shell,.footer-grid{min-width:0}
+.header-inner>* , .intro-grid>* , .section-head>* , .service-grid>* , .collection-grid>* , .about-grid>* , .contact-shell>* , .footer-grid>*{min-width:0}
+
+/* Desktop */
+@media (min-width:1100px){
+  .topbar-inner{min-height:36px}
+  .header-inner{height:86px}
+  .brand-mark{width:46px;height:46px}.brand-mark svg{width:30px;height:30px}
+  .brand-copy strong{font-size:20px}.brand-copy small{font-size:10px}
+  .main-nav{gap:28px;font-size:14px}
+  .hero{min-height:720px;max-height:860px}
+  .hero-media{transform:none;background-position:center 52%}
+  .hero-content{padding:118px 0 176px}
+  .hero h1{font-size:clamp(78px,7vw,118px);max-width:900px}
+  .hero-lead{max-width:610px}
+  .hero-proof{right:max(0px,calc((100vw - 1440px)/2));bottom:0;grid-template-columns:repeat(3,minmax(150px,1fr));padding:26px 38px}
+  .hero-proof div{padding-inline:28px}
+  .section{padding:108px 0}
+  .intro-grid{grid-template-columns:minmax(0,1.05fr) minmax(340px,.75fr);gap:8vw}
+  .section-head{grid-template-columns:minmax(0,1.1fr) minmax(320px,.55fr);gap:7vw}
+  .service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .service-card,.service-featured{min-height:300px}
+  .service-card h3,.service-featured h3{font-size:clamp(28px,2.2vw,34px)}
+  .collection-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .collection-card{grid-template-columns:minmax(210px,42%) minmax(0,58%);min-height:330px}
+  .collection-copy{padding:34px}
+  .gallery{grid-template-rows:340px 340px}
+  .about-grid{grid-template-columns:minmax(360px,.85fr) minmax(0,1.15fr);gap:8vw}
+  .about-image-wrap{max-width:500px}
+  .contact-shell{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)}
+  .footer-grid{grid-template-columns:1.45fr .7fr .95fr .8fr}
+}
+
+/* Laptop / Tablet quer */
+@media (min-width:761px) and (max-width:1099px){
+  .wrap{width:min(940px,calc(100% - 40px))}
+  .header-inner{height:76px;gap:18px}
+  .brand-copy strong{font-size:17px}.brand-copy small{font-size:9px}
+  .main-nav{gap:14px;font-size:12px}.nav-cta{padding:10px 14px}
+  .hero{min-height:660px}
+  .hero-content{padding:92px 0 150px}
+  .hero h1{font-size:clamp(68px,9vw,94px)}
+  .hero-proof{right:18px;bottom:18px;grid-template-columns:repeat(3,minmax(120px,1fr));padding:20px 22px;border-radius:18px}
+  .hero-proof div{padding-inline:18px}
+  .section{padding:84px 0}
+  .intro-grid{gap:5vw}
+  .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+  .service-card,.service-featured{min-height:260px}
+  .collection-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .collection-card{grid-template-columns:1fr;min-height:0}
+  .collection-image{min-height:230px}
+  .collection-copy{min-height:230px}
+  .about-grid{grid-template-columns:minmax(280px,.8fr) minmax(0,1.2fr);gap:6vw}
+  .contact-info,.contact-form{padding:42px 34px}
+}
+
+/* Smartphone */
+@media (max-width:760px){
+  html,body{overflow-x:clip}
+  .wrap{width:calc(100% - 30px);max-width:none}
+  .site-header{width:100%}
+  .header-inner{height:70px;gap:12px}
+  .brand{gap:9px;min-width:0;max-width:calc(100% - 58px)}
+  .brand-mark{flex:0 0 37px}
+  .brand-copy{min-width:0}
+  .brand-copy strong{font-size:clamp(14px,4.2vw,17px);white-space:nowrap}
+  .brand-copy small{font-size:8px;letter-spacing:.13em;white-space:nowrap}
+  .menu-toggle{flex:0 0 44px}
+  .main-nav{width:100%;max-width:100%}
+  .hero{min-height:700px;height:auto}
+  .hero-media{transform:none;background-position:58% center}
+  .hero-content{padding:88px 0 158px}
+  .hero h1{font-size:clamp(56px,18vw,82px);max-width:100%}
+  .hero-lead{font-size:15px;max-width:100%}
+  .hero-actions{width:100%}
+  .hero-actions .btn{flex:1 1 100%;width:100%}
+  .hero-proof{left:15px;right:15px;bottom:15px;width:auto;grid-template-columns:repeat(3,minmax(0,1fr));padding:15px 10px}
+  .hero-proof div{padding-inline:8px;min-width:0;text-align:center}
+  .hero-proof strong{font-size:17px;white-space:normal;overflow-wrap:anywhere}
+  .hero-proof span{font-size:8px;line-height:1.2}
+  .section{padding:60px 0}
+  .intro-grid,.section-head,.about-grid,.contact-shell{width:100%}
+  .intro h2,.section-head h2,.about h2{font-size:clamp(38px,11.8vw,52px);overflow-wrap:break-word}
+  .intro-copy{font-size:15px}
+  .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;border:0}
+  .service-card,.service-featured{min-width:0;min-height:216px;padding:20px 16px}
+  .service-card h3,.service-featured h3{font-size:clamp(20px,5.8vw,24px);overflow-wrap:anywhere}
+  .service-card p,.service-featured p{font-size:11.5px}
+  .visual-break{min-height:470px;padding:15px}
+  .visual-break-card{width:100%;max-width:100%;padding:26px 22px}
+  .visual-break-card h2{font-size:36px}
+  .collection-grid{width:calc(100% + 30px);max-width:none;margin-left:-15px;margin-right:-15px;padding-left:15px;padding-right:15px}
+  .collection-card{min-width:min(84vw,380px);max-width:min(84vw,380px)}
+  .collection-image{min-height:200px}
+  .collection-copy{min-height:174px}
+  .visit-card{width:100%;padding:28px 22px}
+  .gallery{width:100%;max-width:100%;padding-left:15px;padding-right:15px}
+  .gallery figure{min-width:min(82vw,360px)}
+  .about-image-wrap{width:calc(100% - 24px);max-width:460px}
+  .experience-badge{right:-24px}
+  .engagement-card{width:100%}
+  .contact-shell{width:100%;overflow:hidden}
+  .contact-info,.contact-form{width:100%;min-width:0;padding:34px 22px}
+  .contact-info h2{font-size:clamp(40px,12vw,50px);overflow-wrap:break-word}
+  .contact-list strong{overflow-wrap:anywhere}
+  .footer-grid{width:100%}
+  .detail-panel{max-width:100%;width:100%}
+}
+
+@media (max-width:420px){
+  .service-grid{grid-template-columns:1fr}
+  .service-card,.service-featured{min-height:178px}
+  .service-card h3,.service-featured h3{font-size:25px}
+  .hero-proof span{display:none}
+  .hero-proof strong{font-size:16px}
+}
+
+/* Große Bildschirme: Inhalte bleiben zentriert und werden nicht unnatürlich breit. */
+@media (min-width:1600px){
+  .wrap{max-width:1280px}
+  .hero-content{padding-top:126px}
+  .gallery{max-width:1680px}
+}
+
+/* Mobile-Menü bleibt innerhalb des Viewports und erzeugt keine unsichtbare Seitenbreite. */
+@media (max-width:760px){
+  .main-nav{transform:translateY(-8px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,transform .2s ease,visibility 0s linear .2s}
+  .main-nav.open{transform:none;opacity:1;visibility:visible;pointer-events:auto;transition:opacity .2s ease,transform .2s ease}
+  .collection-grid,.gallery{overscroll-behavior-inline:contain}
+}

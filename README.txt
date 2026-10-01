@@ -41,3 +41,10 @@ Version 04 – 01.10.2026
 - Vereinsengagement für Azioni Niños Felices e.V. stärker hervorgehoben, aber als kompakter Teaser mit anklickbarer Detailansicht.
 - Detailansichten enthalten passende Inhalte und klare Aktionen (Projekt anfragen, anrufen, Route, Vereinsseite).
 - Escape-Taste, Hintergrundklick und X schließen Detailansichten; Fokusführung für Tastaturbedienung ergänzt.
+
+Version 05 Änderungen:
+- Responsives Layout für Smartphone, Tablet/Laptop und Desktop gezielt überarbeitet.
+- Maximalbreiten und Grid-Spalten so angepasst, dass die Seite auf großen Bildschirmen zentriert und professionell bleibt.
+- Mobile Breiten, Logo/Header, Hero, Karten, Galerie, Kontakt und Detailfenster gegen horizontales Überlaufen abgesichert.
+- Mobile Servicekarten auf sehr schmalen Geräten automatisch einspaltig.
+- Desktop- und Tablet-Abstände sowie Schriftgrößen neu ausbalanciert.
