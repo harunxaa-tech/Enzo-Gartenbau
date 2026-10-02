@@ -61,3 +61,11 @@ VERSION 06 – 02.10.2026
 - X-Schließen-Symbol im Detailfenster exakt zentriert.
 - CSS/JS mit ?v=06 versehen, damit GitHub Pages nicht versehentlich alte Cache-Dateien zeigt.
 - Mobil, Tablet und Desktop bleiben responsiv.
+
+
+Version 07 Änderungen:
+- Kopfzeile auf Desktop kompakter und ruhiger gestaltet; Kontakt-Button klarer hervorgehoben.
+- Mittlere Hero-Infokachel von „1 Ansprechpartner“ auf „5,0 ★ / 14 Google-Bewertungen“ geändert und mit dem Google-Unternehmensprofil verlinkt.
+- Rechte Hero-Infokachel zeigt jetzt „Lanzenhaarer Str. 49 / 82041 Oberhaching · Maps“ und öffnet Google Maps.
+- Drei Infokacheln behalten ihre bisherige Grundoptik und sind responsiv für Desktop, Tablet und Mobil angepasst.
+- Cache-Version für style.css und script.js auf 07 erhöht.
