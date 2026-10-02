@@ -69,3 +69,11 @@ Version 07 Änderungen:
 - Rechte Hero-Infokachel zeigt jetzt „Lanzenhaarer Str. 49 / 82041 Oberhaching · Maps“ und öffnet Google Maps.
 - Drei Infokacheln behalten ihre bisherige Grundoptik und sind responsiv für Desktop, Tablet und Mobil angepasst.
 - Cache-Version für style.css und script.js auf 07 erhöht.
+
+
+Version 08 Änderungen:
+- Dünne grüne Kopfzeile mit Telefonnummer/E-Mail vollständig entfernt.
+- Hauptheader bleibt sauber und ruhig direkt am Seitenanfang.
+- Hero-Höhen für Desktop/Tablet an den entfernten Topbar-Bereich angepasst.
+- Unscharfes Gartenräume-Bild durch lokales, deutlich schärferes Gartenmotiv ersetzt.
+- Alle Versions-Assets und Cache-Parameter auf 08 aktualisiert.
