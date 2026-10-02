@@ -41,7 +41,7 @@
       title: 'Pflaster, Wege & Terrassen',
       text: 'Flächen, Wege und Sitzplätze werden so geplant, dass Material, Linienführung und Nutzung dauerhaft zusammenpassen.',
       bullets: ['Naturstein, Betonplatten und Keramik', 'Terrassen, Wege und Sitzflächen', 'Pflaster, Kies und Splitt für individuelle Übergänge'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_steine_-_pflasterarbeiten_13.jpg',
+      image: 'steine-06.jpg',
       imageAlt: 'Pflasterarbeiten in einem Garten',
       primary: ['Projekt anfragen', '#kontakt'],
       secondary: ['Jetzt anrufen', 'tel:+49896134421']
@@ -71,7 +71,7 @@
       title: 'Wasser im Garten',
       text: 'Wasser bringt Bewegung, Ruhe und Atmosphäre in den Garten und kann dezent oder als bewusstes Gestaltungselement eingesetzt werden.',
       bullets: ['Garten- und Springbrunnen', 'Quellsteine und Wasserspiele', 'Teiche und naturnahe Wasserbereiche'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_wasser_im_garten_-_brunnen_und_quellsteine_1.jpg',
+      image: 'brunnen-06.jpg',
       imageAlt: 'Brunnen und Wasser im Garten',
       primary: ['Projekt anfragen', '#kontakt'],
       secondary: ['Jetzt anrufen', 'tel:+49896134421']
@@ -91,7 +91,7 @@
       title: 'Pflanzen & Bäume',
       text: 'In der Ausstellung finden Sie eine vielseitige Auswahl für unterschiedliche Gartenstile und Standorte.',
       bullets: ['Laub- und Nadelgehölze', 'Obstbäume und Bambus', 'Rosen, Stauden und Gräser', 'Farne und Kletterpflanzen'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_pflanzen_und_baeume_14.jpg',
+      image: 'pflanzen-06.jpg',
       imageAlt: 'Pflanzen und Bäume in der Ausstellung',
       note: 'Die Verfügbarkeit einzelner Pflanzen kann saisonal variieren. Gerne vorher kurz anrufen.',
       primary: ['Route öffnen', 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching'],
@@ -102,7 +102,7 @@
       title: 'Brunnen & Figuren',
       text: 'Besondere Objekte setzen Blickpunkte und geben Terrassen und Gärten einen individuellen Charakter.',
       bullets: ['Garten- und Springbrunnen', 'Quellsteine und Wasserspiele', 'Dekorative Figuren', 'Ausgewählte Skulpturen'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_wasser_im_garten_-_brunnen_und_quellsteine_1.jpg',
+      image: 'brunnen-06.jpg',
       imageAlt: 'Brunnen in einem gestalteten Garten',
       primary: ['Ausstellung besuchen', 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching'],
       secondary: ['Jetzt anrufen', 'tel:+49896134421']
@@ -112,7 +112,7 @@
       title: 'Vasen & Amphoren',
       text: 'Terracotta und charaktervolle Gefäße bringen mediterrane Wärme in Garten, Eingangsbereich und Terrasse.',
       bullets: ['Original Impruneta-Terracotta', 'Neue und antike Amphoren', 'Vasen und Pflanzgefäße', 'Einzelstücke mit besonderer Patina'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_neue_und_antike_amphoren_7.jpg',
+      image: 'amphoren-06.jpg',
       imageAlt: 'Neue und antike Amphoren',
       primary: ['Ausstellung besuchen', 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching'],
       secondary: ['Jetzt anrufen', 'tel:+49896134421']
@@ -122,7 +122,7 @@
       title: 'Steine & Accessoires',
       text: 'Materialien und Gartenobjekte können vor Ort angesehen und passend zur geplanten Gestaltung ausgewählt werden.',
       bullets: ['Findlinge, Mauer- und Randsteine', 'Terrassenplatten und Pflaster', 'Kies und Splitt', 'Ausgewählte Gartenaccessoires'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_steine_-_pflasterarbeiten_13.jpg',
+      image: 'steine-06.jpg',
       imageAlt: 'Naturstein und Pflaster in der Gartengestaltung',
       primary: ['Ausstellung besuchen', 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching'],
       secondary: ['Jetzt anrufen', 'tel:+49896134421']

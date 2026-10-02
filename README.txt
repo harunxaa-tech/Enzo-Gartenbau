@@ -48,3 +48,16 @@ Version 05 Änderungen:
 - Mobile Breiten, Logo/Header, Hero, Karten, Galerie, Kontakt und Detailfenster gegen horizontales Überlaufen abgesichert.
 - Mobile Servicekarten auf sehr schmalen Geräten automatisch einspaltig.
 - Desktop- und Tablet-Abstände sowie Schriftgrößen neu ausbalanciert.
+
+
+VERSION 06 – 02.10.2026
+- Hero-Hintergrundbild als lokale hochauflösende Datei eingebunden und Schärfe/Kontrast optimiert.
+- Großes Zwischen-/Hintergrundbild ebenfalls lokal und schärfer eingebunden.
+- Übergang vom Hero zum nächsten Bereich weicher gestaltet.
+- Hintergrund des Einleitungsbereichs auf sehr helles Salbeigrün (#EEF3EC) umgestellt.
+- Leistungskarten in ruhigen, zusammengehörigen Grün-/Creme-Tönen abgestimmt; nicht bunt.
+- Vier Ausstellungsbilder lokal optimiert und schärfer eingebunden.
+- Detailfenster-Bilder lokal optimiert.
+- X-Schließen-Symbol im Detailfenster exakt zentriert.
+- CSS/JS mit ?v=06 versehen, damit GitHub Pages nicht versehentlich alte Cache-Dateien zeigt.
+- Mobil, Tablet und Desktop bleiben responsiv.
