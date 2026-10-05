@@ -1058,3 +1058,32 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
   .about-grid { gap: 28px; }
   .engagement-card { margin-top: 24px; }
 }
+
+/* Version 11: Hero auf Mobilgeräten wieder sauber untereinander */
+@media (max-width: 860px) {
+  .hero {
+    display: block;
+    overflow: hidden;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: var(--wrap);
+    margin-inline: auto;
+  }
+  .hero-proof {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: var(--wrap);
+    margin: 0 auto 24px;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+  }
+  .proof-item {
+    width: 100%;
+  }
+}
