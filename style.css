@@ -1087,3 +1087,140 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
     width: 100%;
   }
 }
+
+
+/* Version 12: Mobile Breite, Adresse und korrekte Detailansichten */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body, .site-header, main, .site-footer, .hero, .intro, .services, .exhibition,
+.gallery-section, .about, .contact, .legal {
+  max-width: 100%;
+}
+.detail-list:empty,
+.detail-note:empty {
+  display: none;
+}
+.detail-image-wrap img {
+  image-rendering: auto;
+  filter: contrast(1.035) saturate(1.025);
+}
+
+@media (max-width: 860px) {
+  .site-header,
+  main,
+  .site-footer,
+  .hero {
+    width: 100%;
+    overflow-x: clip;
+  }
+  .hero-media,
+  .hero-overlay {
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-content,
+  .hero-proof {
+    box-sizing: border-box;
+    max-width: calc(100% - 32px);
+  }
+  .hero-proof {
+    width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .proof-item {
+    min-width: 0;
+    overflow: hidden;
+  }
+  .proof-address {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+  .proof-address strong {
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: clamp(1.45rem, 6.15vw, 2rem);
+    line-height: 1.08;
+    letter-spacing: -.025em;
+  }
+  .proof-address > span {
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.35;
+  }
+  .detail-panel {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    margin: 12px auto;
+    overflow-x: hidden;
+  }
+  .detail-image-wrap {
+    height: 245px;
+  }
+  .detail-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .detail-body {
+    min-width: 0;
+  }
+  .gallery,
+  .gallery figure,
+  .about-grid,
+  .contact-shell,
+  .visit-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --wrap: calc(100% - 32px);
+  }
+  .header-inner,
+  .hero-content,
+  .intro .wrap,
+  .services .wrap,
+  .exhibition .wrap,
+  .gallery-section .wrap,
+  .about .wrap,
+  .contact .wrap,
+  .legal .wrap,
+  .site-footer .wrap {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-proof {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+  }
+  .proof-item {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .proof-address strong {
+    font-size: clamp(1.35rem, 6vw, 1.72rem);
+  }
+  .proof-address > span {
+    font-size: .96rem;
+  }
+  .detail-panel {
+    width: calc(100% - 16px);
+    max-width: calc(100% - 16px);
+    margin: 8px auto;
+    max-height: calc(100vh - 16px);
+  }
+  .detail-image-wrap {
+    height: 220px;
+  }
+}

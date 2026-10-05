@@ -112,7 +112,7 @@ const DETAIL_DATA = {
     text: 'Terrassen und Mauern geben dem Garten Form und schaffen geschützte Lieblingsplätze. Material, Farbe und Proportion werden passend zum Haus und zur Umgebung gewählt.',
     items: [],
     note: '',
-    image: 'garten-detail-08.jpg',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/P1030650.jpg',
     primary: { label: 'Projekt anfragen', href: '#kontakt' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
@@ -122,7 +122,7 @@ const DETAIL_DATA = {
     text: 'Pflasterflächen verbinden Wege, Eingänge und Sitzplätze. Eine saubere Ausführung und die passende Materialwahl sorgen für ein dauerhaft stimmiges Ergebnis.',
     items: [],
     note: '',
-    image: 'steine-09.jpg',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_steine_-_pflasterarbeiten_13.jpg',
     primary: { label: 'Projekt anfragen', href: '#kontakt' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
@@ -132,7 +132,7 @@ const DETAIL_DATA = {
     text: 'Eine ausgewogene Bepflanzung bringt Farbe, Struktur und Jahreszeiten in den Garten. Pflanzen werden passend zum Standort und zum gewünschten Pflegeaufwand zusammengestellt.',
     items: [],
     note: '',
-    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_pflanzen_und_baeume_14.jpg',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_garten_-_bepflanzung_4.jpg',
     primary: { label: 'Projekt anfragen', href: '#kontakt' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
@@ -152,7 +152,7 @@ const DETAIL_DATA = {
     text: 'Ausgewählte Gartenobjekte setzen persönliche Akzente und geben einer Gestaltung zusätzlichen Charakter. Besonders gut wirken sie, wenn Material und Umgebung aufeinander abgestimmt sind.',
     items: [],
     note: '',
-    image: 'amphoren-09.jpg',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_neue_und_antike_amphoren_7.jpg',
     primary: { label: 'Projekt anfragen', href: '#kontakt' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
