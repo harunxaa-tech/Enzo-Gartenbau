@@ -417,10 +417,8 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
   background-size: cover;
   background-repeat: no-repeat;
 }
-.collection-card.c1 .collection-image { background-image: url('pflanzen-09.jpg'); }
-.collection-card.c2 .collection-image { background-image: url('brunnen-09.jpg'); }
-.collection-card.c3 .collection-image { background-image: url('amphoren-09.jpg'); }
-.collection-card.c4 .collection-image { background-image: url('steine-09.jpg'); }
+.collection-card.c1 .collection-image { background-image: url('https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_pflanzen_und_baeume_14.jpg'); }
+.collection-card.c2 .collection-image { background-image: url('https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_wasser_im_garten_-_brunnen_und_quellsteine_1.jpg'); }
 .collection-copy { padding: 28px 28px 30px; }
 .collection-copy h3 { margin-bottom: 14px; }
 .collection-copy p { color: var(--muted); }
@@ -940,4 +938,123 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
   .gallery figcaption { left: 14px; bottom: 14px; font-size: .95rem; }
   .opening-hours div { flex-direction: column; }
   .mobile-call { left: 16px; right: 16px; justify-content: center; }
+}
+
+/* Version 10: kompaktere Abstände, mittigere Mobilansicht, zwei Ausstellungskarten */
+.section { padding: 90px 0; }
+.collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 920px; margin-inline: auto; }
+.collection-card.c1 .collection-image { background-image: url('https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_pflanzen_und_baeume_14.jpg'); }
+.collection-card.c2 .collection-image { background-image: url('https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_wasser_im_garten_-_brunnen_und_quellsteine_1.jpg'); }
+.gallery-section { padding-top: 82px; padding-bottom: 48px; }
+.about { padding-top: 48px; padding-bottom: 82px; }
+.gallery figure { cursor: pointer; }
+.gallery figure::after {
+  content: "Mehr erfahren";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  z-index: 3;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  color: var(--green);
+  font-size: .82rem;
+  font-weight: 750;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity .2s ease, transform .2s ease;
+  pointer-events: none;
+}
+.gallery figure:hover::after,
+.gallery figure:focus-within::after { opacity: 1; transform: none; }
+.gallery-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border: 0;
+  background: transparent;
+}
+.gallery figcaption { z-index: 3; pointer-events: none; }
+.gallery img { transition: transform .3s ease, filter .3s ease; }
+.gallery figure:hover img,
+.gallery figure:focus-within img { transform: scale(1.015); filter: contrast(1.03) saturate(1.02); }
+
+@media (max-width: 860px) {
+  :root { --wrap: min(100%, calc(100% - 40px)); }
+  .section { padding: 62px 0; }
+  .header-inner { padding-inline: 0; }
+  .hero-content { padding-top: 78px; padding-bottom: 48px; }
+  .intro { padding-top: 58px; }
+  .intro-grid,
+  .section-head,
+  .about-grid { gap: 28px; }
+  .service-grid { gap: 14px; }
+  .service-card { min-height: 210px; padding: 26px 24px; }
+  .collection-grid {
+    max-width: none;
+    grid-auto-columns: minmax(285px, 84vw);
+    margin-left: 0;
+    margin-right: calc((var(--wrap) - 100vw) / 2);
+    padding-right: 20px;
+  }
+  .collection-image { height: 220px; }
+  .collection-copy { padding: 24px 24px 26px; }
+  .visit-card { margin-top: 24px; }
+  .gallery-section { padding-top: 56px; padding-bottom: 32px; }
+  .gallery { gap: 12px; }
+  .about { padding-top: 32px; padding-bottom: 58px; }
+  .about-grid { gap: 34px; }
+  .about-copy { padding-inline: 2px; }
+  .about-image-wrap { width: 100%; }
+  .contact { padding-top: 58px; }
+  .legal { padding-top: 58px; padding-bottom: 58px; }
+  .detail-panel { border-radius: 24px; }
+  .detail-body { padding: 26px 24px 30px; }
+  .mobile-call {
+    left: auto;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    min-height: 56px;
+    padding: 0 18px;
+    font-size: .98rem;
+  }
+  .mobile-call span { width: 31px; height: 31px; }
+}
+
+@media (max-width: 520px) {
+  :root { --wrap: calc(100% - 44px); }
+  h2 { font-size: clamp(2rem, 10.6vw, 3.25rem); }
+  .header-inner { min-height: 92px; }
+  .brand-mark { width: 50px; height: 50px; }
+  .brand-copy strong { font-size: 1.14rem; }
+  .brand-copy small { font-size: .63rem; letter-spacing: .16em; }
+  .menu-toggle { width: 54px; height: 54px; }
+  .main-nav { top: 92px; }
+  .hero-content { padding-top: 66px; }
+  .hero h1 { font-size: clamp(3rem, 13vw, 4.25rem); }
+  .hero-lead { font-size: 1rem; }
+  .intro-grid > div,
+  .intro-copy,
+  .section-head > div,
+  .section-head > p,
+  .about-copy { width: 100%; }
+  .section-head { margin-bottom: 26px; }
+  .collection-grid { grid-auto-columns: minmax(270px, 86vw); }
+  .collection-image { height: 205px; }
+  .visit-card { padding: 22px; }
+  .gallery { grid-auto-rows: 225px; }
+  .gallery figure::after { display: none; }
+  .experience-badge { width: 146px; height: 146px; right: 14px; bottom: 14px; }
+  .experience-badge strong { font-size: 2.65rem; }
+  .experience-badge span { font-size: .78rem; }
+  .mobile-call { left: auto; right: 14px; width: auto; justify-content: center; }
+}
+/* Feinschliff für eine kompakte, verkaufsfertige Seitenlänge */
+.gallery-section { padding-bottom: 38px; }
+.about { padding-top: 38px; }
+@media (max-width: 860px) {
+  .gallery-section { padding-bottom: 24px; }
+  .about { padding-top: 24px; }
+  .about-grid { gap: 28px; }
+  .engagement-card { margin-top: 24px; }
 }

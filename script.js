@@ -42,7 +42,7 @@ const DETAIL_DATA = {
     text: 'Pflanzen bringen Charakter, Farbe und Jahreszeiten in den Garten. Bepflanzung und Rasen werden dabei immer passend zum Standort geplant.',
     items: ['Stauden, Gräser und Gehölze', 'Rasenflächen und grüne Ruhebereiche', 'Blühende Akzente und Strukturpflanzen', 'Pflegeleichte und langlebige Konzepte'],
     note: 'Auch bestehende Beete können neu gedacht und aufgewertet werden.',
-    image: 'pflanzen-09.jpg',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_pflanzen_und_baeume_14.jpg',
     primary: { label: 'Projekt anfragen', href: '#kontakt' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
@@ -52,7 +52,7 @@ const DETAIL_DATA = {
     text: 'Grenzen, Höhen und Blickbeziehungen lassen sich durch Mauern, Zäune und Sichtschutz elegant ordnen, ohne dass der Garten an Leichtigkeit verliert.',
     items: ['Mauern zur Gliederung von Gartenräumen', 'Zäune passend zum Stil des Hauses', 'Sichtschutz für mehr Privatsphäre', 'Stimmige Einbindung in die Bepflanzung'],
     note: 'So entstehen geschützte Bereiche mit klarer Struktur.',
-    image: 'gartenraeume-09.jpg',
+    image: 'gartenraeume-10.jpg',
     primary: { label: 'Projekt anfragen', href: '#kontakt' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
@@ -62,7 +62,7 @@ const DETAIL_DATA = {
     text: 'Wasser belebt den Garten und schafft Atmosphäre. Brunnen, Wasserspiele oder kleine Becken setzen ruhige und charaktervolle Akzente.',
     items: ['Brunnen und Quellsteine', 'Wasserspiele als Blickfang', 'Einbindung in Pflaster und Bepflanzung', 'Auswahl passender Formen und Materialien'],
     note: 'Je nach Stil kann Wasser modern, mediterran oder ganz natürlich wirken.',
-    image: 'brunnen-09.jpg',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_wasser_im_garten_-_brunnen_und_quellsteine_1.jpg',
     primary: { label: 'Projekt anfragen', href: '#kontakt' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
@@ -82,7 +82,7 @@ const DETAIL_DATA = {
     text: 'In der Ausstellung finden Sie eine vielseitige Auswahl für unterschiedliche Gartenstile und Standorte.',
     items: ['Laub und Nadelgehölze', 'Obstbäume und Bambus', 'Rosen, Stauden und Gräser', 'Farne und Kletterpflanzen'],
     note: 'Die Verfügbarkeit einzelner Pflanzen kann saisonal variieren. Gerne vorher kurz anrufen.',
-    image: 'pflanzen-09.jpg',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_pflanzen_und_baeume_14.jpg',
     primary: { label: 'Ausstellung besuchen', href: 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
@@ -92,28 +92,68 @@ const DETAIL_DATA = {
     text: 'Besondere Objekte setzen Blickpunkte und geben Terrassen und Gärten einen individuellen Charakter.',
     items: ['Garten und Springbrunnen', 'Quellsteine und Wasserspiele', 'Dekorative Figuren', 'Ausgewählte Skulpturen'],
     note: 'Vor Ort lassen sich Wirkung, Material und Größe am besten vergleichen.',
-    image: 'brunnen-09.jpg',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_wasser_im_garten_-_brunnen_und_quellsteine_1.jpg',
     primary: { label: 'Ausstellung besuchen', href: 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
-  'collection-amphora': {
-    kicker: 'Ausstellung & Verkauf',
-    title: 'Vasen & Amphoren',
-    text: 'Terracotta und charaktervolle Gefäße bringen mediterrane Wärme in Garten, Eingangsbereich und Terrasse.',
-    items: ['Original Impruneta Terracotta', 'Neue und antike Amphoren', 'Vasen und Pflanzgefäße', 'Einzelstücke mit besonderer Patina'],
-    note: 'Die Auswahl vor Ort bietet viele Größen, Formen und Oberflächen.',
-    image: 'amphoren-09.jpg',
-    primary: { label: 'Ausstellung besuchen', href: 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching' },
+  'gallery-gardenrooms': {
+    kicker: 'Einblicke',
+    title: 'Gartenräume',
+    text: 'Gut gestaltete Gartenräume verbinden Pflanzen, Naturstein und klare Linien zu einem ruhigen Gesamtbild. So entstehen Bereiche, die sich offen anfühlen und trotzdem Struktur geben.',
+    items: [],
+    note: '',
+    image: 'gartenraeume-10.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
-  'collection-stone': {
-    kicker: 'Ausstellung & Verkauf',
-    title: 'Steine & Accessoires',
-    text: 'Materialien und Gartenobjekte können vor Ort angesehen und passend zur geplanten Gestaltung ausgewählt werden.',
-    items: ['Findlinge, Mauer und Randsteine', 'Terrassenplatten und Pflaster', 'Kies und Splitt', 'Ausgewählte Gartenaccessoires'],
-    note: 'So lassen sich Oberflächen und Farben besser aufeinander abstimmen.',
+  'gallery-terrace': {
+    kicker: 'Einblicke',
+    title: 'Terrassen & Mauern',
+    text: 'Terrassen und Mauern geben dem Garten Form und schaffen geschützte Lieblingsplätze. Material, Farbe und Proportion werden passend zum Haus und zur Umgebung gewählt.',
+    items: [],
+    note: '',
+    image: 'garten-detail-08.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'gallery-paving': {
+    kicker: 'Einblicke',
+    title: 'Pflasterarbeiten',
+    text: 'Pflasterflächen verbinden Wege, Eingänge und Sitzplätze. Eine saubere Ausführung und die passende Materialwahl sorgen für ein dauerhaft stimmiges Ergebnis.',
+    items: [],
+    note: '',
     image: 'steine-09.jpg',
-    primary: { label: 'Ausstellung besuchen', href: 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching' },
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'gallery-planting': {
+    kicker: 'Einblicke',
+    title: 'Bepflanzung',
+    text: 'Eine ausgewogene Bepflanzung bringt Farbe, Struktur und Jahreszeiten in den Garten. Pflanzen werden passend zum Standort und zum gewünschten Pflegeaufwand zusammengestellt.',
+    items: [],
+    note: '',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_pflanzen_und_baeume_14.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'gallery-water': {
+    kicker: 'Einblicke',
+    title: 'Wasser im Garten',
+    text: 'Brunnen und Wasserspiele schaffen Bewegung und Ruhe zugleich. Sie können dezent integriert oder gezielt als Blickfang eingesetzt werden.',
+    items: [],
+    note: '',
+    image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_wasser_im_garten_-_brunnen_und_quellsteine_1.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'gallery-objects': {
+    kicker: 'Einblicke',
+    title: 'Amphoren & Objekte',
+    text: 'Ausgewählte Gartenobjekte setzen persönliche Akzente und geben einer Gestaltung zusätzlichen Charakter. Besonders gut wirken sie, wenn Material und Umgebung aufeinander abgestimmt sind.',
+    items: [],
+    note: '',
+    image: 'amphoren-09.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
     secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
   },
   'verein': {
