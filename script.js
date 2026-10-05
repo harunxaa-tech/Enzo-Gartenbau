@@ -1,294 +1,234 @@
-(() => {
-  const body = document.body;
-  const menu = document.querySelector('.main-nav');
-  const toggle = document.querySelector('.menu-toggle');
+const body = document.body;
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.getElementById('main-nav');
+const modal = document.getElementById('detail-modal');
+const closeTargets = document.querySelectorAll('[data-modal-close]');
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
-  const setMenu = (open) => {
-    if (!menu || !toggle) return;
-    menu.classList.toggle('open', open);
-    toggle.classList.toggle('active', open);
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-    body.classList.toggle('nav-open', open);
-  };
+const detailImage = document.getElementById('detail-image');
+const detailKicker = document.getElementById('detail-kicker');
+const detailTitle = document.getElementById('detail-title');
+const detailText = document.getElementById('detail-text');
+const detailList = document.getElementById('detail-list');
+const detailNote = document.getElementById('detail-note');
+const detailPrimary = document.getElementById('detail-primary');
+const detailSecondary = document.getElementById('detail-secondary');
 
-  toggle?.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
-  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+const DETAIL_DATA = {
+  'service-plan': {
+    kicker: 'Leistungen',
+    title: 'Gartenplanung & Umgestaltung',
+    text: 'Von der ersten Idee bis zur stimmigen Gesamtlösung begleitet Enzo Giardino Ihr Projekt mit Erfahrung, Gespür und einem klaren Blick für Proportionen.',
+    items: ['Persönliche Beratung vor Ort', 'Planung passend zu Grundstück und Haus', 'Umgestaltung bestehender Gartenbereiche', 'Material und Pflanzkonzepte aus einer Hand'],
+    note: 'Gerne besprechen wir Wünsche, Stilrichtung und Budget in einem ersten Gespräch.',
+    image: 'garten-detail-08.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'service-pflaster': {
+    kicker: 'Leistungen',
+    title: 'Pflaster, Wege & Terrassen',
+    text: 'Wege, Plätze und Terrassen schaffen Struktur und Aufenthaltsqualität. Entscheidend sind Materialauswahl, Verlegung und ein harmonisches Gesamtbild.',
+    items: ['Pflasterflächen und Eingänge', 'Terrassen aus Naturstein oder Betonstein', 'Randabschlüsse und Einfassungen', 'Stimmige Verbindung von Haus und Garten'],
+    note: 'Wir helfen bei der Auswahl von Oberflächen, Formaten und Farben.',
+    image: 'steine-09.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'service-gruen': {
+    kicker: 'Leistungen',
+    title: 'Bepflanzung & Rasen',
+    text: 'Pflanzen bringen Charakter, Farbe und Jahreszeiten in den Garten. Bepflanzung und Rasen werden dabei immer passend zum Standort geplant.',
+    items: ['Stauden, Gräser und Gehölze', 'Rasenflächen und grüne Ruhebereiche', 'Blühende Akzente und Strukturpflanzen', 'Pflegeleichte und langlebige Konzepte'],
+    note: 'Auch bestehende Beete können neu gedacht und aufgewertet werden.',
+    image: 'pflanzen-09.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'service-sichtschutz': {
+    kicker: 'Leistungen',
+    title: 'Mauern, Zäune & Sichtschutz',
+    text: 'Grenzen, Höhen und Blickbeziehungen lassen sich durch Mauern, Zäune und Sichtschutz elegant ordnen, ohne dass der Garten an Leichtigkeit verliert.',
+    items: ['Mauern zur Gliederung von Gartenräumen', 'Zäune passend zum Stil des Hauses', 'Sichtschutz für mehr Privatsphäre', 'Stimmige Einbindung in die Bepflanzung'],
+    note: 'So entstehen geschützte Bereiche mit klarer Struktur.',
+    image: 'gartenraeume-09.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'service-wasser': {
+    kicker: 'Leistungen',
+    title: 'Wasser im Garten',
+    text: 'Wasser belebt den Garten und schafft Atmosphäre. Brunnen, Wasserspiele oder kleine Becken setzen ruhige und charaktervolle Akzente.',
+    items: ['Brunnen und Quellsteine', 'Wasserspiele als Blickfang', 'Einbindung in Pflaster und Bepflanzung', 'Auswahl passender Formen und Materialien'],
+    note: 'Je nach Stil kann Wasser modern, mediterran oder ganz natürlich wirken.',
+    image: 'brunnen-09.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'service-licht': {
+    kicker: 'Leistungen',
+    title: 'Licht im Garten',
+    text: 'Gezielt eingesetztes Licht schafft Orientierung und Stimmung. Es betont Wege, Pflanzen und Lieblingsplätze, ohne den Garten zu überladen.',
+    items: ['Licht für Wege und Eingänge', 'Inszenierung von Pflanzen und Mauern', 'Atmosphäre für Terrassen und Sitzplätze', 'Zurückhaltende, elegante Lichtwirkung'],
+    note: 'Gutes Licht macht den Garten auch am Abend erlebbar.',
+    image: 'hero-garten-08.jpg',
+    primary: { label: 'Projekt anfragen', href: '#kontakt' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'collection-plants': {
+    kicker: 'Ausstellung & Verkauf',
+    title: 'Pflanzen & Bäume',
+    text: 'In der Ausstellung finden Sie eine vielseitige Auswahl für unterschiedliche Gartenstile und Standorte.',
+    items: ['Laub und Nadelgehölze', 'Obstbäume und Bambus', 'Rosen, Stauden und Gräser', 'Farne und Kletterpflanzen'],
+    note: 'Die Verfügbarkeit einzelner Pflanzen kann saisonal variieren. Gerne vorher kurz anrufen.',
+    image: 'pflanzen-09.jpg',
+    primary: { label: 'Ausstellung besuchen', href: 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'collection-water': {
+    kicker: 'Ausstellung & Verkauf',
+    title: 'Brunnen & Figuren',
+    text: 'Besondere Objekte setzen Blickpunkte und geben Terrassen und Gärten einen individuellen Charakter.',
+    items: ['Garten und Springbrunnen', 'Quellsteine und Wasserspiele', 'Dekorative Figuren', 'Ausgewählte Skulpturen'],
+    note: 'Vor Ort lassen sich Wirkung, Material und Größe am besten vergleichen.',
+    image: 'brunnen-09.jpg',
+    primary: { label: 'Ausstellung besuchen', href: 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'collection-amphora': {
+    kicker: 'Ausstellung & Verkauf',
+    title: 'Vasen & Amphoren',
+    text: 'Terracotta und charaktervolle Gefäße bringen mediterrane Wärme in Garten, Eingangsbereich und Terrasse.',
+    items: ['Original Impruneta Terracotta', 'Neue und antike Amphoren', 'Vasen und Pflanzgefäße', 'Einzelstücke mit besonderer Patina'],
+    note: 'Die Auswahl vor Ort bietet viele Größen, Formen und Oberflächen.',
+    image: 'amphoren-09.jpg',
+    primary: { label: 'Ausstellung besuchen', href: 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'collection-stone': {
+    kicker: 'Ausstellung & Verkauf',
+    title: 'Steine & Accessoires',
+    text: 'Materialien und Gartenobjekte können vor Ort angesehen und passend zur geplanten Gestaltung ausgewählt werden.',
+    items: ['Findlinge, Mauer und Randsteine', 'Terrassenplatten und Pflaster', 'Kies und Splitt', 'Ausgewählte Gartenaccessoires'],
+    note: 'So lassen sich Oberflächen und Farben besser aufeinander abstimmen.',
+    image: 'steine-09.jpg',
+    primary: { label: 'Ausstellung besuchen', href: 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching' },
+    secondary: { label: 'Jetzt anrufen', href: 'tel:+49896134421' }
+  },
+  'verein': {
+    kicker: 'Engagement',
+    title: 'Azioni Niños Felices e.V.',
+    text: 'Seit vielen Jahren engagiert sich Enzo Giardino nicht nur für hochwertige Gärten, sondern auch sozial. Der Verein unterstützt benachteiligte Kinder in der Dominikanischen Republik mit langfristiger Hilfe und konkreten Projekten.',
+    items: ['Gegründet im Jahr 2001', 'Unterstützung für Kinder und Familien', 'Nachhaltige Hilfe mit persönlichem Einsatz', 'Weitere Informationen direkt beim Verein'],
+    note: 'Mehr zur Vereinsarbeit und zu aktuellen Projekten finden Sie über den folgenden Link.',
+    image: 'enzo-portrait.jpg',
+    primary: { label: 'Verein ansehen', href: 'https://www.azioni-ninos-felices.de/' },
+    secondary: { label: 'Kontakt aufnehmen', href: '#kontakt' }
+  }
+};
 
-  const year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
-
-  document.querySelectorAll('[data-open-details]').forEach(link => {
-    link.addEventListener('click', () => {
-      const target = document.getElementById(link.dataset.openDetails);
-      if (target) target.open = true;
-    });
+function openModal(key) {
+  const data = DETAIL_DATA[key];
+  if (!data || !modal) return;
+  detailImage.src = data.image;
+  detailImage.alt = data.title;
+  detailKicker.textContent = data.kicker || '';
+  detailTitle.textContent = data.title || '';
+  detailText.textContent = data.text || '';
+  detailNote.textContent = data.note || '';
+  detailList.innerHTML = '';
+  (data.items || []).forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    detailList.appendChild(li);
   });
+  detailPrimary.textContent = data.primary?.label || 'Mehr erfahren';
+  detailPrimary.href = data.primary?.href || '#kontakt';
+  detailPrimary.target = data.primary?.href?.startsWith('http') ? '_blank' : '';
+  detailPrimary.rel = data.primary?.href?.startsWith('http') ? 'noopener' : '';
+  detailSecondary.textContent = data.secondary?.label || 'Jetzt anrufen';
+  detailSecondary.href = data.secondary?.href || 'tel:+49896134421';
+  detailSecondary.target = data.secondary?.href?.startsWith('http') ? '_blank' : '';
+  detailSecondary.rel = data.secondary?.href?.startsWith('http') ? 'noopener' : '';
+  modal.hidden = false;
+  modal.setAttribute('aria-hidden', 'false');
+  body.style.overflow = 'hidden';
+}
 
-  const details = {
-    'service-plan': {
-      kicker: 'Leistung',
-      title: 'Gartenplanung & Umgestaltung',
-      text: 'Vom ersten Gedanken bis zum stimmigen Gesamtkonzept: bestehende Flächen werden neu gedacht und neue Gärten passend zu Haus, Grundstück und persönlichem Stil geplant.',
-      bullets: ['Persönliche Beratung & Bestandsaufnahme', 'Konzept für klassische, moderne, mediterrane oder naturnahe Gärten', 'Neu- und Umgestaltung bestehender Außenanlagen'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/P1030004.jpg',
-      imageAlt: 'Individuell gestalteter Garten',
-      primary: ['Projekt anfragen', '#kontakt'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'service-pflaster': {
-      kicker: 'Leistung',
-      title: 'Pflaster, Wege & Terrassen',
-      text: 'Flächen, Wege und Sitzplätze werden so geplant, dass Material, Linienführung und Nutzung dauerhaft zusammenpassen.',
-      bullets: ['Naturstein, Betonplatten und Keramik', 'Terrassen, Wege und Sitzflächen', 'Pflaster, Kies und Splitt für individuelle Übergänge'],
-      image: 'steine-08.jpg',
-      imageAlt: 'Pflasterarbeiten in einem Garten',
-      primary: ['Projekt anfragen', '#kontakt'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'service-gruen': {
-      kicker: 'Leistung',
-      title: 'Bepflanzung & Rasen',
-      text: 'Die Bepflanzung gibt einem Garten Atmosphäre. Ausgewählt werden Pflanzen, die zu Standort, Pflegeaufwand und gewünschtem Gartenbild passen.',
-      bullets: ['Bäume, Sträucher und Hecken', 'Stauden, Rosen, Gräser und weitere Pflanzungen', 'Rollrasen und passende Rasenlösungen'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_garten_-_bepflanzung_4.jpg',
-      imageAlt: 'Bepflanzter Garten mit Rasen',
-      primary: ['Projekt anfragen', '#kontakt'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'service-sichtschutz': {
-      kicker: 'Leistung',
-      title: 'Mauern, Zäune & Sichtschutz',
-      text: 'Struktur schafft Ruhe: Mauern, Höhenunterschiede und Sichtschutz gliedern den Garten und schaffen geschützte Bereiche.',
-      bullets: ['Mauern und Einfassungen', 'Zäune und Sichtschutzlösungen', 'Treppen, Sitzplätze und räumliche Gliederung'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/P1030650.jpg',
-      imageAlt: 'Garten mit Mauern und gestalteten Bereichen',
-      primary: ['Projekt anfragen', '#kontakt'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'service-wasser': {
-      kicker: 'Leistung',
-      title: 'Wasser im Garten',
-      text: 'Wasser bringt Bewegung, Ruhe und Atmosphäre in den Garten und kann dezent oder als bewusstes Gestaltungselement eingesetzt werden.',
-      bullets: ['Garten- und Springbrunnen', 'Quellsteine und Wasserspiele', 'Teiche und naturnahe Wasserbereiche'],
-      image: 'brunnen-08.jpg',
-      imageAlt: 'Brunnen und Wasser im Garten',
-      primary: ['Projekt anfragen', '#kontakt'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'service-licht': {
-      kicker: 'Leistung',
-      title: 'Licht im Garten',
-      text: 'Gezielt eingesetztes Licht macht Wege sicherer und setzt Pflanzen, Wasserflächen und besondere Gartenobjekte auch am Abend in Szene.',
-      bullets: ['Beleuchtung von Wegen und Terrassen', 'Akzentlicht für Pflanzen und Skulpturen', 'Stimmungsvolle Inszenierung von Wasser und Gartenräumen'],
-      image: 'https://enzogiardino.de/wp-content/uploads/2023/01/P1030004.jpg',
-      imageAlt: 'Professionell gestalteter Garten',
-      primary: ['Projekt anfragen', '#kontakt'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'collection-plants': {
-      kicker: 'Ausstellung & Verkauf',
-      title: 'Pflanzen & Bäume',
-      text: 'In der Ausstellung finden Sie eine vielseitige Auswahl für unterschiedliche Gartenstile und Standorte.',
-      bullets: ['Laub- und Nadelgehölze', 'Obstbäume und Bambus', 'Rosen, Stauden und Gräser', 'Farne und Kletterpflanzen'],
-      image: 'pflanzen-08.jpg',
-      imageAlt: 'Pflanzen und Bäume in der Ausstellung',
-      note: 'Die Verfügbarkeit einzelner Pflanzen kann saisonal variieren. Gerne vorher kurz anrufen.',
-      primary: ['Route öffnen', 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'collection-water': {
-      kicker: 'Ausstellung & Verkauf',
-      title: 'Brunnen & Figuren',
-      text: 'Besondere Objekte setzen Blickpunkte und geben Terrassen und Gärten einen individuellen Charakter.',
-      bullets: ['Garten- und Springbrunnen', 'Quellsteine und Wasserspiele', 'Dekorative Figuren', 'Ausgewählte Skulpturen'],
-      image: 'brunnen-08.jpg',
-      imageAlt: 'Brunnen in einem gestalteten Garten',
-      primary: ['Ausstellung besuchen', 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'collection-amphora': {
-      kicker: 'Ausstellung & Verkauf',
-      title: 'Vasen & Amphoren',
-      text: 'Terracotta und charaktervolle Gefäße bringen mediterrane Wärme in Garten, Eingangsbereich und Terrasse.',
-      bullets: ['Original Impruneta-Terracotta', 'Neue und antike Amphoren', 'Vasen und Pflanzgefäße', 'Einzelstücke mit besonderer Patina'],
-      image: 'amphoren-08.jpg',
-      imageAlt: 'Neue und antike Amphoren',
-      primary: ['Ausstellung besuchen', 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'collection-stone': {
-      kicker: 'Ausstellung & Verkauf',
-      title: 'Steine & Accessoires',
-      text: 'Materialien und Gartenobjekte können vor Ort angesehen und passend zur geplanten Gestaltung ausgewählt werden.',
-      bullets: ['Findlinge, Mauer- und Randsteine', 'Terrassenplatten und Pflaster', 'Kies und Splitt', 'Ausgewählte Gartenaccessoires'],
-      image: 'steine-08.jpg',
-      imageAlt: 'Naturstein und Pflaster in der Gartengestaltung',
-      primary: ['Ausstellung besuchen', 'https://www.google.com/maps/search/?api=1&query=Lanzenhaarer+Str.+49+82041+Oberhaching'],
-      secondary: ['Jetzt anrufen', 'tel:+49896134421']
-    },
-    'verein': {
-      kicker: 'Soziales Engagement',
-      title: 'Azioni Niños Felices e.V.',
-      text: 'Enzo Giardino gründete den gemeinnützigen Verein 2001 nach persönlichen Erfahrungen mit Kinderarmut in der Dominikanischen Republik. Ziel ist es, benachteiligten Kindern langfristig Sicherheit, Bildung und medizinische Unterstützung zu ermöglichen.',
-      bullets: ['Kinderheim Casa Niños Felices in Sosúa', 'Kinderpatenschaften und persönliche Begleitung', 'Unterstützung von Schule und Bildung', 'Medizinische Nothilfe für bedürftige Kinder', 'Persönliches Engagement und Projektbetreuung vor Ort'],
-      image: 'enzo-portrait.jpg',
-      imageAlt: 'Enzo Giardino im Garten',
-      note: 'Weitere Informationen zu den Projekten und Möglichkeiten zur Unterstützung finden Sie direkt auf der offiziellen Vereinswebsite.',
-      primary: ['Zum Verein', 'https://www.azionininosfelices.de/'],
-      secondary: ['Schließen', '#close']
-    }
-  };
+function closeModal() {
+  if (!modal) return;
+  modal.hidden = true;
+  modal.setAttribute('aria-hidden', 'true');
+  detailImage.removeAttribute('src');
+  body.style.overflow = body.classList.contains('menu-open') ? 'hidden' : '';
+}
 
-  const modal = document.getElementById('detail-modal');
-  const modalPanel = modal?.querySelector('.detail-panel');
-  const modalImageWrap = document.getElementById('detail-image-wrap');
-  const modalImage = document.getElementById('detail-image');
-  const modalKicker = document.getElementById('detail-kicker');
-  const modalTitle = document.getElementById('detail-title');
-  const modalText = document.getElementById('detail-text');
-  const modalList = document.getElementById('detail-list');
-  const modalNote = document.getElementById('detail-note');
-  const modalPrimary = document.getElementById('detail-primary');
-  const modalSecondary = document.getElementById('detail-secondary');
-  let lastFocus = null;
+document.querySelectorAll('[data-detail]').forEach(button => {
+  button.addEventListener('click', () => openModal(button.dataset.detail));
+});
 
-  const setAction = (element, action) => {
-    if (!element || !action) return;
-    const [label, href] = action;
-    element.firstChild.textContent = `${label} `;
-    element.href = href;
-    const external = href.startsWith('http');
-    if (external) {
-      element.target = '_blank';
-      element.rel = 'noopener';
-    } else {
-      element.removeAttribute('target');
-      element.removeAttribute('rel');
-    }
-  };
+closeTargets.forEach(el => el.addEventListener('click', closeModal));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeModal();
+    if (body.classList.contains('menu-open')) toggleMenu(false);
+  }
+});
 
-  const openDetail = (key, trigger) => {
-    const data = details[key];
-    if (!data || !modal) return;
-    lastFocus = trigger || document.activeElement;
+function toggleMenu(force) {
+  const shouldOpen = typeof force === 'boolean' ? force : !body.classList.contains('menu-open');
+  body.classList.toggle('menu-open', shouldOpen);
+  menuToggle?.setAttribute('aria-expanded', String(shouldOpen));
+  body.style.overflow = shouldOpen ? 'hidden' : '';
+}
 
-    modalKicker.textContent = data.kicker || '';
-    modalTitle.textContent = data.title;
-    modalText.textContent = data.text;
-
-    modalList.innerHTML = '';
-    (data.bullets || []).forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = item;
-      modalList.appendChild(li);
-    });
-    modalList.hidden = !(data.bullets || []).length;
-
-    if (data.note) {
-      modalNote.textContent = data.note;
-      modalNote.hidden = false;
-    } else {
-      modalNote.textContent = '';
-      modalNote.hidden = true;
-    }
-
-    if (data.image) {
-      modalImage.src = data.image;
-      modalImage.alt = data.imageAlt || '';
-      modalImageWrap.hidden = false;
-    } else {
-      modalImage.removeAttribute('src');
-      modalImage.alt = '';
-      modalImageWrap.hidden = true;
-    }
-
-    setAction(modalPrimary, data.primary);
-    setAction(modalSecondary, data.secondary);
-
-    modal.hidden = false;
-    modal.setAttribute('aria-hidden', 'false');
-    body.classList.add('modal-open');
-    requestAnimationFrame(() => modal.querySelector('.detail-close')?.focus());
-  };
-
-  const closeDetail = () => {
-    if (!modal || modal.hidden) return;
-    modal.hidden = true;
-    modal.setAttribute('aria-hidden', 'true');
-    body.classList.remove('modal-open');
-    if (lastFocus instanceof HTMLElement) lastFocus.focus({ preventScroll: true });
-  };
-
-  document.querySelectorAll('[data-detail]').forEach(trigger => {
-    trigger.addEventListener('click', () => openDetail(trigger.dataset.detail, trigger));
+menuToggle?.addEventListener('click', () => toggleMenu());
+mainNav?.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 860) toggleMenu(false);
   });
-  modal?.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', closeDetail));
+});
 
-  modalPrimary?.addEventListener('click', () => {
-    if (modalPrimary.getAttribute('href')?.startsWith('#')) closeDetail();
-  });
-  modalSecondary?.addEventListener('click', (event) => {
-    const href = modalSecondary.getAttribute('href') || '';
-    if (href === '#close') {
-      event.preventDefault();
-      closeDetail();
-    }
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      if (modal && !modal.hidden) closeDetail();
-      else if (menu?.classList.contains('open')) setMenu(false);
-    }
-
-    if (event.key === 'Tab' && modal && !modal.hidden && modalPanel) {
-      const focusable = [...modalPanel.querySelectorAll('a[href],button:not([disabled])')].filter(el => !el.hidden);
-      if (!focusable.length) return;
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
-    }
-  });
-
-  const form = document.getElementById('contact-form');
-  form?.addEventListener('submit', (event) => {
+document.querySelectorAll('[data-open-details]').forEach(link => {
+  link.addEventListener('click', (event) => {
+    const id = link.getAttribute('data-open-details');
+    const detail = document.getElementById(id);
+    if (!detail) return;
     event.preventDefault();
-    if (!form.reportValidity()) return;
-
-    const data = new FormData(form);
-    const subject = `Anfrage über enzogiardino.de – ${data.get('topic') || 'Gartengestaltung'}`;
-    const bodyText = [
-      'Guten Tag Herr Giardino,',
-      '',
-      data.get('message') || '',
-      '',
-      'Kontaktdaten:',
-      `Name: ${data.get('name') || ''}`,
-      `E-Mail: ${data.get('email') || ''}`,
-      `Telefon: ${data.get('phone') || '-'}`,
-      `Thema: ${data.get('topic') || ''}`,
-      '',
-      'Viele Grüße'
-    ].join('\n');
-
-    window.location.href = `mailto:enzo_giardino@web.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+    detail.open = true;
+    toggleMenu(false);
+    detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+});
 
-  document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('error', () => {
-      if (img === modalImage) {
-        modalImageWrap.hidden = true;
-        return;
-      }
-      img.closest('figure, .about-image-wrap')?.classList.add('image-missing');
-      img.style.visibility = 'hidden';
-    });
-  });
-})();
+const form = document.getElementById('contact-form');
+form?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const formData = new FormData(form);
+  const name = (formData.get('name') || '').toString().trim();
+  const email = (formData.get('email') || '').toString().trim();
+  const phone = (formData.get('phone') || '').toString().trim();
+  const topic = (formData.get('topic') || '').toString().trim();
+  const message = (formData.get('message') || '').toString().trim();
+
+  const subject = encodeURIComponent(`Anfrage Website: ${topic}`);
+  const bodyText = [
+    'Guten Tag,',
+    '',
+    'ich möchte eine Anfrage stellen.',
+    '',
+    `Name: ${name}`,
+    `Email: ${email}`,
+    phone ? `Telefon: ${phone}` : 'Telefon:',
+    `Thema: ${topic}`,
+    '',
+    'Nachricht:',
+    message,
+    '',
+    'Mit freundlichen Grüßen',
+    name
+  ].join('\n');
+
+  window.location.href = `mailto:enzo_giardino@web.de?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+});
