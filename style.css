@@ -372,13 +372,13 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
 }
 .visual-break-card {
   position: relative;
-  z-index: 2;
+ z-index: 2;
   width: min(530px, calc(100% - 40px));
   margin: 0 auto 40px 40px;
-  padding: 30px 32px;
-  border-radius: 24px;
+ padding: 30px 32px;
+ border-radius: 24px;
   background: rgba(23,71,50,.78);
-  color: #fff;
+ color: #fff;
   box-shadow: var(--shadow);
 }
 .visual-break-card p:last-child { color: rgba(255,255,255,.84); margin-top: 12px; }
@@ -397,7 +397,6 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
   box-shadow: 0 12px 28px rgba(0,0,0,.05);
 }
 .hours-pill span { font-size: .93rem; text-transform: uppercase; color: var(--muted); letter-spacing: .12em; }
-.hours-pill strong { font-size: 1rem; }
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -408,7 +407,7 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
   overflow: hidden;
   background: #fff;
   border-radius: var(--radius);
-  border: 1px solid rgba(23,71,50,.08);
+  border#¢1px solid rgba(23,71,50,.08);
   box-shadow: 0 14px 28px rgba(13,27,20,.05);
 }
 .collection-image {
@@ -417,8 +416,10 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
   background-size: cover;
   background-repeat: no-repeat;
 }
-.collection-card.c1 .collection-image { background-image: url('https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_pflanzen_und_baeume_14.jpg'); }
-.collection-card.c2 .collection-image { background-image: url('https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_wasser_im_garten_-_brunnen_und_quellsteine_1.jpg'); }
+.collection-card.c1 .collection-image { background-image: url('pflanzen-09.jpg'); }
+.collection-card.c2 .collection-image { background-image: url('brunnen-09.jpg'); }
+.collection-card.c3 .collection-image { background-image: url('amphoren-09.jpg'); }
+.collection-card.c4 .collection-image { background-image: url('steine-09.jpg'); }
 .collection-copy { padding: 28px 28px 30px; }
 .collection-copy h3 { margin-bottom: 14px; }
 .collection-copy p { color: var(--muted); }
@@ -463,6 +464,18 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
 }
 .g1 { grid-row: span 2; }
 .g2 { grid-column: 2 / span 2; }
+.gallery-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.gallery figure:hover img {
+  transform: scale(1.02);
+  transition: transform .25s ease;
+}
 .about { background: #faf9f5; }
 .about-image-wrap {
   position: relative;
@@ -473,17 +486,17 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
 .about-image-wrap img { width: 100%; aspect-ratio: 4 / 4.2; object-fit: cover; }
 .experience-badge {
   position: absolute;
-  right: 26px;
-  bottom: 26px;
-  width: 220px;
-  height: 220px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  background: rgba(245,242,235,.96);
-  color: var(--green);
-  box-shadow: 0 16px 34px rgba(0,0,0,.12);
+ right: 26px;
+ bottom: 26px;
+ width: 220px;
+ height: 220px;
+ border-radius: 999px;
+ display: grid;
+ place-items: center;
+ text-align: center;
+ background: rgba(245,242,235,.96);
+ color: var(--green);
+ box-shadow: 0 16px 34px rgba(0,0,0,.12);
 }
 .experience-badge strong { font-family: var(--font-display); font-size: 4.1rem; line-height: 1; }
 .experience-badge span { color: #6d776f; text-transform: uppercase; letter-spacing: .14em; }
@@ -493,734 +506,5 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-9px) rota
   border-radius: 26px;
   padding: 26px 26px 26px 88px;
   background: #fff;
-  border: 1px solid rgba(23,71,50,.08);
-  box-shadow: 0 12px 28px rgba(13,27,20,.05);
-}
-.engagement-icon {
-  position: absolute;
-  left: 24px;
-  top: 28px;
-  font-size: 2rem;
-  color: var(--green);
-}
-.engagement-kicker {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--green);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  font-size: .92rem;
-}
-.engagement-card strong { display: block; font-size: 1.5rem; margin-bottom: 8px; }
-.contact { background: #f7f6f1; }
-.contact-shell {
-  border-radius: 34px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
-  background: linear-gradient(135deg, #143b2b 0%, #214836 100%);
-  color: #fff;
-  box-shadow: var(--shadow);
-}
-.contact-info,
-.contact-form { padding: 46px; }
-.contact h2 { color: #fff; margin-bottom: 16px; }
-.contact-lead { color: rgba(255,255,255,.82); }
-.contact-list {
-  display: grid;
-  gap: 14px;
-  margin-top: 28px;
-}
-.contact-list a {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 18px;
-  padding: 14px 16px;
-}
-.contact-list a small { display: block; color: rgba(255,255,255,.72); margin-bottom: 2px; }
-.contact-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  display: grid;
-  place-items: center;
-  background: rgba(255,255,255,.12);
-  flex: 0 0 auto;
-}
-.opening-hours {
-  margin-top: 28px;
-  display: grid;
-  gap: 10px;
-}
-.opening-hours div {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255,255,255,.12);
-}
-.opening-hours span { color: rgba(255,255,255,.74); }
-.contact-form {
-  background: #fff;
-  color: var(--text);
-}
-.form-head h3 { margin-top: 8px; }
-.contact-form label {
-  display: grid;
-  gap: 8px;
-  margin-top: 16px;
-  font-weight: 600;
-}
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-  border: 1px solid rgba(23,71,50,.14);
-  background: #fbfbf8;
-  border-radius: 16px;
-  padding: 14px 16px;
-  color: var(--text);
-}
-.contact-form textarea { resize: vertical; min-height: 140px; }
-.form-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-.check {
-  display: flex !important;
-  align-items: flex-start;
-  gap: 12px;
-  font-weight: 400 !important;
-}
-.check input { width: auto; margin-top: 3px; }
-.form-submit { margin-top: 12px; background: var(--green); color: #fff; box-shadow: 0 18px 34px rgba(15,43,31,.16); }
-.form-note { margin-top: 16px; color: var(--muted); }
-.legal { background: #f0eee6; }
-.legal-wrap { display: grid; gap: 12px; }
-.legal details {
-  background: #fff;
-  border-radius: 22px;
-  border: 1px solid rgba(23,71,50,.08);
-  box-shadow: 0 10px 20px rgba(13,27,20,.03);
-}
-.legal summary {
-  list-style: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  padding: 24px 28px;
-  font-size: 1.28rem;
-  font-weight: 700;
-}
-.legal summary::-webkit-details-marker { display: none; }
-.legal details[open] summary span { transform: rotate(45deg); }
-.legal summary span { transition: transform .2s ease; color: var(--green); font-size: 1.8rem; }
-.legal-content { padding: 0 28px 28px; }
-.legal-content h2,
-.legal-content h3 { margin: 12px 0 10px; font-family: var(--font-body); letter-spacing: 0; font-weight: 700; line-height: 1.2; }
-.site-footer {
-  background: #041c14;
-  color: #edf2ee;
-  padding: 58px 0 26px;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.2fr .7fr .7fr .7fr;
-  gap: 30px;
-}
-.footer-brand .brand-mark { border-color: rgba(255,255,255,.18); }
-.footer-brand .brand-copy strong { color: #fff; }
-.footer-brand .brand-copy small,
-.site-footer p,
-.site-footer a { color: rgba(255,255,255,.78); }
-.site-footer h3 {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-.site-footer a { display: block; margin-bottom: 10px; }
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  color: rgba(255,255,255,.55);
-  margin-top: 30px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255,255,255,.10);
-}
-.detail-modal[hidden] { display: none; }
-.detail-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 1300;
-}
-.detail-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(5,16,11,.62);
-  backdrop-filter: blur(8px);
-}
-.detail-panel {
-  position: relative;
-  z-index: 2;
-  width: min(1080px, calc(100% - 40px));
-  max-height: min(88vh, 920px);
-  overflow: auto;
-  margin: 6vh auto;
-  border-radius: 28px;
-  background: #fff;
-  display: grid;
-  grid-template-columns: minmax(300px, 42%) minmax(0, 58%);
-  box-shadow: 0 30px 70px rgba(0,0,0,.22);
-}
-.detail-image-wrap { min-height: 100%; background: #eef3ec; }
-.detail-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
-.detail-body { padding: 42px 44px 36px; }
-.detail-body h2 { font-size: clamp(2.2rem, 4vw, 4.4rem); margin-bottom: 18px; }
-#detail-text { color: var(--muted); font-size: 1.13rem; }
-.detail-list { margin: 24px 0 0; padding: 0; list-style: none; }
-.detail-list li {
-  position: relative;
-  padding: 14px 0 14px 28px;
-  color: #52615a;
-  border-top: 1px solid rgba(23,71,50,.10);
-}
-.detail-list li::before {
-  content: "â€¢";
-  position: absolute;
-  left: 8px;
-  top: 10px;
-  color: #6b8b78;
-  font-size: 1.6rem;
-}
-.detail-note {
-  margin-top: 20px;
-  padding: 14px 16px;
-  background: #f6f7f2;
-  border-radius: 16px;
-}
-.detail-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 24px;
-}
-.detail-secondary {
-  color: var(--green);
-  background: #fff;
-  border: 1px solid rgba(23,71,50,.16);
-}
-.detail-close {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 5;
-  width: 52px;
-  height: 52px;
-  border-radius: 999px;
-  border: 1px solid rgba(23,71,50,.10);
-  background: rgba(255,255,255,.94);
-  display: grid;
-  place-items: center;
-  font-size: 1.9rem;
-  line-height: 1;
-  color: #6c7670;
-  box-shadow: 0 12px 24px rgba(0,0,0,.10);
-}
-.detail-close span {
-  display: inline-block;
-  line-height: 1;
-  transform: translateY(-1px);
-}
-.mobile-call {
-  position: fixed;
-  right: max(18px, env(safe-area-inset-right));
-  bottom: calc(18px + env(safe-area-inset-bottom));
-  z-index: 900;
-  min-height: 62px;
-  padding: 0 22px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #195138, #1f6a46);
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  box-shadow: 0 18px 34px rgba(17,41,30,.24);
-}
-.mobile-call span {
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.15);
-  display: grid;
-  place-items: center;
-}
-@media (max-width: 1180px) {
-  .hero { min-height: 820px; }
-  .service-grid,
-  .collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 240px; }
-  .g1, .g2 { grid-column: auto; grid-row: auto; }
-  .detail-panel { grid-template-columns: 1fr; }
-  .detail-image-wrap { height: 320px; }
-}
-@media (max-width: 860px) {
-  :root { --wrap: min(100%, calc(100% - 32px)); }
-  .section { padding: 84px 0; }
-  .header-inner { min-height: 94px; }
-  .brand { gap: 14px; }
-  .brand-mark { width: 54px; height: 54px; }
-  .brand-copy strong { font-size: 1.48rem; }
-  .brand-copy small { font-size: .78rem; letter-spacing: .18em; }
-  .menu-toggle { display: inline-flex; }
-  .main-nav {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 94px;
-    bottom: 0;
-    z-index: 980;
-    background: linear-gradient(180deg, #071d15, #092118);
-    padding: 26px 24px 120px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    transform: translateY(-12px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .25s ease, transform .25s ease;
-    overflow: auto;
-  }
-  .main-nav > a {
-    color: #fff;
-    font-size: 1.2rem;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 0;
-    background: none !important;
-  }
-  .main-nav > a.nav-cta {
-    margin-top: 10px;
-    width: auto;
-    padding: 14px 22px;
-    border-radius: 999px;
-    color: var(--green);
-    background: #fff !important;
-    border: 0;
-  }
-  body.menu-open .main-nav { opacity: 1; pointer-events: auto; transform: translateY(0); }
-  .mobile-nav-extra {
-    display: grid;
-    gap: 24px;
-    width: 100%;
-    margin-top: 18px;
-    padding-top: 22px;
-    border-top: 1px solid rgba(255,255,255,.12);
-  }
-  .mobile-nav-extra p,
-  .mobile-nav-contact a,
-  .mobile-nav-legal a { color: rgba(255,255,255,.82); }
-  .mobile-nav-contact,
-  .mobile-nav-legal { display: grid; gap: 12px; }
-  body.menu-open { overflow: hidden; }
-  .hero {
-    min-height: auto;
-    padding-bottom: 0;
-  }
-  .hero-content {
-    padding: 96px 0 56px;
-  }
-  .hero-content > * { max-width: 100%; }
-  .hero h1 { font-size: clamp(3rem, 14vw, 5rem); }
-  .hero-proof {
-    position: relative;
-    width: var(--wrap);
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
-    margin: -26px auto 0;
-    grid-template-columns: 1fr;
-  }
-  .proof-item { min-height: 110px; }
-  .proof-item:not(:last-child)::after {
-    right: 24px;
-    left: 24px;
-    top: auto;
-    bottom: 0;
-    width: auto;
-    height: 1px;
-  }
-  .intro { padding-top: 74px; }
-  .intro-grid,
-  .about-grid,
-  .contact-shell,
-  .footer-grid,
-  .section-head,
-  .visit-card { grid-template-columns: 1fr; display: grid; }
-  .intro-copy,
-  .about-copy { justify-self: stretch; max-width: 100%; }
-  .section-head { align-items: start; }
-  .service-grid { grid-template-columns: 1fr; }
-  .visual-break { min-height: 380px; background-position: center; }
-  .visual-break-card {
-    margin: 0 auto 22px;
-    width: var(--wrap);
-  }
-  .collection-grid {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(290px, 82vw);
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
-    gap: 14px;
-    padding-bottom: 10px;
-    margin-right: -16px;
-  }
-  .collection-card { scroll-snap-align: start; }
-  .collection-image { height: 230px; }
-  .visit-card { gap: 20px; }
-  .visit-actions { justify-content: flex-start; }
-  .gallery {
-    width: var(--wrap);
-    grid-template-columns: 1fr;
-    grid-auto-rows: 250px;
-  }
-  .about-image-wrap { margin: 0 auto; width: 100%; }
-  .experience-badge {
-    width: 170px;
-    height: 170px;
-    right: 16px;
-    bottom: 16px;
-  }
-  .experience-badge strong { font-size: 3rem; }
-  .engagement-card { padding: 22px 22px 22px 78px; }
-  .contact-info,
-  .contact-form,
-  .detail-body { padding: 28px 22px; }
-  .form-row { grid-template-columns: 1fr; }
-  .detail-panel {
-    width: min(100% - 20px, 720px);
-    margin: 10px auto;
-    max-height: calc(100vh - 20px);
-  }
-  .detail-image-wrap { height: 260px; }
-  .footer-bottom { flex-direction: column; }
-  .mobile-call {
-    min-height: 60px;
-    padding: 0 20px;
-  }
-}
-@media (max-width: 520px) {
-  h2 { font-size: clamp(2.05rem, 12vw, 3.5rem); }
-  .brand-copy strong { font-size: 1.2rem; }
-  .brand-copy small { font-size: .68rem; }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .btn,
-  .detail-actions .btn { width: 100%; }
-  .btn-ghost { justify-content: center; }
-  .collection-grid { grid-auto-columns: 86vw; }
-  .collection-copy { padding: 22px; }
-  .visit-card { padding: 24px; }
-  .visit-card h3 { font-size: 2.15rem; }
-  .gallery figcaption { left: 14px; bottom: 14px; font-size: .95rem; }
-  .opening-hours div { flex-direction: column; }
-  .mobile-call { left: 16px; right: 16px; justify-content: center; }
-}
-
-/* Version 10: kompaktere AbstÃ¤nde, mittigere Mobilansicht, zwei Ausstellungskarten */
-.section { padding: 90px 0; }
-.collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 920px; margin-inline: auto; }
-.collection-card.c1 .collection-image { background-image: url('https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_ausstellung_-_verkauf_-_pflanzen_und_baeume_14.jpg'); }
-.collection-card.c2 .collection-image { background-image: url('https://enzogiardino.de/wp-content/uploads/2023/01/enzo_giardino_-_wasser_im_garten_-_brunnen_und_quellsteine_1.jpg'); }
-.gallery-section { padding-top: 82px; padding-bottom: 48px; }
-.about { padding-top: 48px; padding-bottom: 82px; }
-.gallery figure { cursor: pointer; }
-.gallery figure::after {
-  content: "Mehr erfahren";
-  position: absolute;
-  right: 18px;
-  top: 18px;
-  z-index: 3;
-  padding: 9px 13px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.9);
-  color: var(--green);
-  font-size: .82rem;
-  font-weight: 750;
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: opacity .2s ease, transform .2s ease;
-  pointer-events: none;
-}
-.gallery figure:hover::after,
-.gallery figure:focus-within::after { opacity: 1; transform: none; }
-.gallery-hit {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  border: 0;
-  background: transparent;
-}
-.gallery figcaption { z-index: 3; pointer-events: none; }
-.gallery img { transition: transform .3s ease, filter .3s ease; }
-.gallery figure:hover img,
-.gallery figure:focus-within img { transform: scale(1.015); filter: contrast(1.03) saturate(1.02); }
-
-@media (max-width: 860px) {
-  :root { --wrap: min(100%, calc(100% - 40px)); }
-  .section { padding: 62px 0; }
-  .header-inner { padding-inline: 0; }
-  .hero-content { padding-top: 78px; padding-bottom: 48px; }
-  .intro { padding-top: 58px; }
-  .intro-grid,
-  .section-head,
-  .about-grid { gap: 28px; }
-  .service-grid { gap: 14px; }
-  .service-card { min-height: 210px; padding: 26px 24px; }
-  .collection-grid {
-    max-width: none;
-    grid-auto-columns: minmax(285px, 84vw);
-    margin-left: 0;
-    margin-right: calc((var(--wrap) - 100vw) / 2);
-    padding-right: 20px;
-  }
-  .collection-image { height: 220px; }
-  .collection-copy { padding: 24px 24px 26px; }
-  .visit-card { margin-top: 24px; }
-  .gallery-section { padding-top: 56px; padding-bottom: 32px; }
-  .gallery { gap: 12px; }
-  .about { padding-top: 32px; padding-bottom: 58px; }
-  .about-grid { gap: 34px; }
-  .about-copy { padding-inline: 2px; }
-  .about-image-wrap { width: 100%; }
-  .contact { padding-top: 58px; }
-  .legal { padding-top: 58px; padding-bottom: 58px; }
-  .detail-panel { border-radius: 24px; }
-  .detail-body { padding: 26px 24px 30px; }
-  .mobile-call {
-    left: auto;
-    right: max(16px, env(safe-area-inset-right));
-    bottom: calc(16px + env(safe-area-inset-bottom));
-    min-height: 56px;
-    padding: 0 18px;
-    font-size: .98rem;
-  }
-  .mobile-call span { width: 31px; height: 31px; }
-}
-
-@media (max-width: 520px) {
-  :root { --wrap: calc(100% - 44px); }
-  h2 { font-size: clamp(2rem, 10.6vw, 3.25rem); }
-  .header-inner { min-height: 92px; }
-  .brand-mark { width: 50px; height: 50px; }
-  .brand-copy strong { font-size: 1.14rem; }
-  .brand-copy small { font-size: .63rem; letter-spacing: .16em; }
-  .menu-toggle { width: 54px; height: 54px; }
-  .main-nav { top: 92px; }
-  .hero-content { padding-top: 66px; }
-  .hero h1 { font-size: clamp(3rem, 13vw, 4.25rem); }
-  .hero-lead { font-size: 1rem; }
-  .intro-grid > div,
-  .intro-copy,
-  .section-head > div,
-  .section-head > p,
-  .about-copy { width: 100%; }
-  .section-head { margin-bottom: 26px; }
-  .collection-grid { grid-auto-columns: minmax(270px, 86vw); }
-  .collection-image { height: 205px; }
-  .visit-card { padding: 22px; }
-  .gallery { grid-auto-rows: 225px; }
-  .gallery figure::after { display: none; }
-  .experience-badge { width: 146px; height: 146px; right: 14px; bottom: 14px; }
-  .experience-badge strong { font-size: 2.65rem; }
-  .experience-badge span { font-size: .78rem; }
-  .mobile-call { left: auto; right: 14px; width: auto; justify-content: center; }
-}
-/* Feinschliff fÃ¼r eine kompakte, verkaufsfertige SeitenlÃ¤nge */
-.gallery-section { padding-bottom: 38px; }
-.about { padding-top: 38px; }
-@media (max-width: 860px) {
-  .gallery-section { padding-bottom: 24px; }
-  .about { padding-top: 24px; }
-  .about-grid { gap: 28px; }
-  .engagement-card { margin-top: 24px; }
-}
-
-/* Version 11: Hero auf MobilgerÃ¤ten wieder sauber untereinander */
-@media (max-width: 860px) {
-  .hero {
-    display: block;
-    overflow: hidden;
-  }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    width: var(--wrap);
-    margin-inline: auto;
-  }
-  .hero-proof {
-    position: relative;
-    z-index: 3;
-    display: grid;
-    grid-template-columns: 1fr;
-    width: var(--wrap);
-    margin: 0 auto 24px;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
-  }
-  .proof-item {
-    width: 100%;
-  }
-}
-
-
-/* Version 12: Mobile Breite, Adresse und korrekte Detailansichten */
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-body, .site-header, main, .site-footer, .hero, .intro, .services, .exhibition,
-.gallery-section, .about, .contact, .legal {
-  max-width: 100%;
-}
-.detail-list:empty,
-.detail-note:empty {
-  display: none;
-}
-.detail-image-wrap img {
-  image-rendering: auto;
-  filter: contrast(1.035) saturate(1.025);
-}
-
-@media (max-width: 860px) {
-  .site-header,
-  main,
-  .site-footer,
-  .hero {
-    width: 100%;
-    overflow-x: clip;
-  }
-  .hero-media,
-  .hero-overlay {
-    width: 100%;
-    max-width: 100%;
-  }
-  .hero-content,
-  .hero-proof {
-    box-sizing: border-box;
-    max-width: calc(100% - 32px);
-  }
-  .hero-proof {
-    width: calc(100% - 32px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .proof-item {
-    min-width: 0;
-    overflow: hidden;
-  }
-  .proof-address {
-    padding-left: 26px;
-    padding-right: 26px;
-  }
-  .proof-address strong {
-    display: block;
-    max-width: 100%;
-    white-space: nowrap;
-    font-size: clamp(1.45rem, 6.15vw, 2rem);
-    line-height: 1.08;
-    letter-spacing: -.025em;
-  }
-  .proof-address > span {
-    display: block;
-    max-width: 100%;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    line-height: 1.35;
-  }
-  .detail-panel {
-    width: calc(100% - 24px);
-    max-width: calc(100% - 24px);
-    margin: 12px auto;
-    overflow-x: hidden;
-  }
-  .detail-image-wrap {
-    height: 245px;
-  }
-  .detail-image-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .detail-body {
-    min-width: 0;
-  }
-  .gallery,
-  .gallery figure,
-  .about-grid,
-  .contact-shell,
-  .visit-card {
-    min-width: 0;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 520px) {
-  :root {
-    --wrap: calc(100% - 32px);
-  }
-  .header-inner,
-  .hero-content,
-  .intro .wrap,
-  .services .wrap,
-  .exhibition .wrap,
-  .gallery-section .wrap,
-  .about .wrap,
-  .contact .wrap,
-  .legal .wrap,
-  .site-footer .wrap {
-    width: calc(100% - 32px);
-    max-width: calc(100% - 32px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero-proof {
-    width: calc(100% - 32px);
-    max-width: calc(100% - 32px);
-  }
-  .proof-item {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-  .proof-address strong {
-    font-size: clamp(1.35rem, 6vw, 1.72rem);
-  }
-  .proof-address > span {
-    font-size: .96rem;
-  }
-  .detail-panel {
-    width: calc(100% - 16px);
-    max-width: calc(100% - 16px);
-    margin: 8px auto;
-    max-height: calc(100vh - 16px);
-  }
-  .detail-image-wrap {
-    height: 220px;
-  }
-}
+  border#¢‚6öÆ–B&v&ƒ#2ÃsÃSÂã‚“°¢&÷‚×6†F÷s¢'‚#‡‚&v&ƒ2Ã#rÃ#ÂãR“°§Ð¢æVævvVÖVçBÖ–6öâ°¢÷6—F–öã¢'6öÇWFS°¢ÆVgC¢#Gƒ°¢F÷¢#‡ƒ°¢föçB×6—¦S¢'&VÓ°¢6öÆ÷#¢f"‚ÒÖw&VVâ“°§Ð¢æVævvVÖVçBÖ¶–6¶W"°¢F—7Æ“¢&Æö6³°¢Ö&v–âÖ&÷GFöÓ¢‡ƒ°¢6öÆ÷#¢f"‚ÒÖw&VVâ“°¢föçB×vV–v‡C¢s°¢FW‡B×G&ç6f÷&Ó¢WW&66S°¢ÆWGFW"×76–æs¢ã&VÓ°¢föçB×6—¦S¢ã“'&VÓ°§Ð¢æVævvVÖVçBÖ6&B7G&öær²F—7Æ“¢&Æö6³²föçB×6—¦S¢ãW&VÓ²Ö&v–âÖ&÷GFöÓ¢‡ƒ²Ð¢æ6öçF7B²&6¶w&÷VæC¢6cvcfc²Ð¢æ6öçF7B×6†VÆÂ°¢&÷&FW"×&F—W3¢3Gƒ°¢÷fW&fÆ÷s¢†–FFVã°¢F—7Æ“¢w&–C°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢Ö–æÖ‚ƒÂã†g"’Ö–æÖ‚ƒÂã“&g"“°¢&6¶w&÷VæC¢Æ–æV"Öw&F–VçBƒ3VFVrÂ3C6#&"RÂ3#Cƒ3bR“°¢6öÆ÷#¢6ffc°¢&÷‚×6†F÷s¢f"‚Ò×6†F÷r“°§Ð¢æ6öçF7BÖ–æfòÀ¢æ6öçF7BÖf÷&Ò²FF–æs¢Cgƒ²Ð¢æ6öçF7Bƒ"²6öÆ÷#¢6ffc²Ö&v–âÖ&÷GFöÓ¢gƒ²Ð¢æ6öçF7BÖÆVB²6öÆ÷#¢&v&ƒ#SRÃ#SRÃ#SRÂãƒ"“²Ð¢æ6öçF7BÖÆ—7B°¢F—7Æ“¢w&–C°¢v¢Gƒ°¢Ö&v–â×F÷¢#‡ƒ°§Ð¢æ6öçF7BÖÆ—7B°¢F—7Æ“¢fÆWƒ°¢v¢gƒ°¢Æ–vâÖ—FV×3¢6VçFW#°¢&6¶w&÷VæC¢&v&ƒ#SRÃ#SRÃ#SRÂãr“°¢&÷&FW#¢‚6öÆ–B&v&ƒ#SRÃ#SRÃ#SRÂã‚“°¢&÷&FW"×&F—W3¢‡ƒ°¢FF–æs¢G‚gƒ°§Ð¢æ6öçF7BÖÆ—7B6ÖÆÂ²F—7Æ“¢&Æö6³²6öÆ÷#¢&v&ƒ#SRÃ#SRÃ#SRÂãs"“²Ö&v–âÖ&÷GFöÓ¢'ƒ²Ð¢æ6öçF7BÖ–6öâ°¢v–GFƒ¢CGƒ°¢†V–v‡C¢CGƒ°¢&÷&FW"×&F—W3¢Gƒ°¢F—7Æ“¢w&–C°¢Æ6RÖ—FV×3¢6VçFW#°¢&6¶w&÷VæC¢&v&ƒ#SRÃ#SRÃ#SRÂã"“°¢fÆWƒ¢WFó°§Ð¢æ÷Væ–ærÖ†÷W'2°¢Ö&v–â×F÷¢#‡ƒ°¢F—7Æ“¢w&–C°¢v¢ƒ°§Ð¢æ÷Væ–ærÖ†÷W'2F—b°¢F—7Æ“¢fÆWƒ°¢§W7F–g’Ö6öçFVçC¢76RÖ&WGvVVã°¢v¢gƒ°¢FF–ærÖ&÷GFöÓ¢ƒ°¢&÷&FW"Ö&÷GFöÓ¢‚6öÆ–B&v&ƒ#SRÃ#SRÃ#SRÂã"“°§Ð¢æ÷Væ–ærÖ†÷W'27â²6öÆ÷#¢&v&ƒ#SRÃ#SRÃ#SRÂãsB“²Ð¢æ6öçF7BÖf÷&Ò°¢&6¶w&÷VæC¢6ffc°¢6öÆ÷#¢f"‚Ò×FW‡B“°§Ð¢æf÷&ÒÖ†VBƒ2²Ö&v–â×F÷¢‡ƒ²Ð¢æ6öçF7BÖf÷&ÒÆ&VÂ°¢F—7Æ“¢w&–C°¢v¢‡ƒ°¢Ö&v–â×F÷¢gƒ°¢föçB×vV–v‡C¢c°§Ð¢æ6öçF7BÖf÷&Ò–çWBÀ¢æ6öçF7BÖf÷&Ò6VÆV7BÀ¢æ6öçF7BÖf÷&ÒFW‡F&V°¢v–GFƒ¢S°¢&÷&FW#¢‚6öÆ–B&v&ƒ#2ÃsÃSÂãB“°¢&6¶w&÷VæC¢6f&f&cƒ°¢&÷&FW"×&F—W3¢gƒ°¢FF–æs¢G‚gƒ°¢6öÆ÷#¢f"‚Ò×FW‡B“°§Ð¢æ6öçF7BÖf÷&ÒFW‡F&V²&W6—¦S¢fW'F–6Ã²Ö–âÖ†V–v‡C¢Cƒ²Ð¢æf÷&Ò×&÷r°¢F—7Æ“¢w&–C°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢&WVBƒ"ÂÖ–æÖ‚ƒÂg"’“°¢v¢Gƒ°§Ð¢æ6†V6²°¢F—7Æ“¢fÆW‚–×÷'FçC°¢Æ–vâÖ—FV×3¢fÆW‚×7F'C°¢v¢'ƒ°¢föçB×vV–v‡C¢C–×÷'FçC°§Ð¢æ6†V6²–çWB²v–GFƒ¢WFó²Ö&v–â×F÷¢7ƒ²Ð¢æf÷&Ò×7V&Ö—B²Ö&v–â×F÷¢'ƒ²&6¶w&÷VæC¢f"‚ÒÖw&VVâ“²6öÆ÷#¢6ffc²&÷‚×6†F÷s¢‡‚3G‚&v&ƒRÃC2Ã3Âãb“²Ð¢æf÷&ÒÖæ÷FR²Ö&v–â×F÷¢gƒ²6öÆ÷#¢f"‚ÒÖ×WFVB“²Ð¢æÆVvÂ²&6¶w&÷VæC¢6cVVSc²Ð¢æÆVvÂ×w&²F—7Æ“¢w&–C²v¢'ƒ²Ð¢æÆVvÂFWF–Ç2°¢&6¶w&÷VæC¢6ffc°¢&÷&FW"×&F—W3¢#'ƒ°¢&÷&FW#¢‚6öÆ–B&v&ƒ#2ÃsÃSÂã‚“°¢&÷‚×6†F÷s¢‚#‚&v&ƒ2Ã#rÃ#Âã2“°§Ð¢æÆVvÂ7VÖÖ'’°¢Æ—7B×7G–ÆS¢æöæS°¢7W'6÷#¢ö–çFW#°¢F—7Æ“¢fÆWƒ°¢§W7F–g’Ö6öçFVçC¢76RÖ&WGvVVã°¢Æ–vâÖ—FV×3¢6VçFW#°¢v¢‡ƒ°¢FF–æs¢#G‚#‡ƒ°¢föçB×6—¦S¢ã#‡&VÓ°¢föçB×vV–v‡C¢s°§Ð¢æÆVvÂ7VÖÖ'“£¢×vV&¶—BÖFWF–Ç2ÖÖ&¶W"²F—7Æ“¢æöæS²Ð¢æÆVvÂFWF–Ç5¶÷VåÒ7VÖÖ'’7â²G&ç6f÷&Ó¢&÷FFRƒCVFVr“²Ð¢æÆVvÂ7VÖÖ'’7â²G&ç6—F–öã¢G&ç6f÷&Òã'2V6S²6öÆ÷#¢f"‚ÒÖw&VVâ“²föçB×6—¦S¢ã‡&VÓ²Ð¢æÆVvÂÖ6öçFVçB²FF–æs¢#‡‚#‡ƒ²Ð¢æÆVvÂÖ6öçFVçBƒ"À¢æÆVvÂÖ6öçFVçBƒ2²Ö&v–ã¢'‚ƒ²föçBÖfÖ–Ç“¢f"‚ÒÖföçBÖ&öG’“²ÆWGFW"×76–æs¢²föçB×vV–v‡C¢s²Æ–æRÖ†V–v‡C¢ã#²Ð¢ç6—FRÖfö÷FW"°¢&6¶w&÷VæC¢3C3C°¢6öÆ÷#¢6VFc&VS°¢FF–æs¢S‡‚#gƒ°§Ð¢æfö÷FW"Öw&–B°¢F—7Æ“¢w&–C°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢ã&g"ãvg"ãvg"ãvg#°¢v¢3ƒ°§Ð¢æfö÷FW"Ö'&æBæ'&æBÖÖ&²²&÷&FW"Ö6öÆ÷#¢&v&ƒ#SRÃ#SRÃ#SRÂã‚“²Ð¢æfö÷FW"Ö'&æBæ'&æBÖ6÷’7G&öær²6öÆ÷#¢6ffc²Ð¢æfö÷FW"Ö'&æBæ'&æBÖ6÷’6ÖÆÂÀ¢ç6—FRÖfö÷FW"À¢ç6—FRÖfö÷FW"²6öÆ÷#¢&v&ƒ#SRÃ#SRÃ#SRÂãs‚“²Ð¢ç6—FRÖfö÷FW"ƒ2°¢föçBÖfÖ–Ç“¢f"‚ÒÖföçBÖ&öG’“°¢föçB×6—¦S¢&VÓ°¢föçB×vV–v‡C¢s°¢ÆWGFW"×76–æs¢ã&VÓ°¢FW‡B×G&ç6f÷&Ó¢WW&66S°¢Ö&v–âÖ&÷GFöÓ¢Gƒ°§Ð¢ç6—FRÖfö÷FW"²F—7Æ“¢&Æö6³²Ö&v–âÖ&÷GFöÓ¢ƒ²Ð¢æfö÷FW"Ö&÷GFöÒ°¢F—7Æ“¢fÆWƒ°¢§W7F–g’Ö6öçFVçC¢76RÖ&WGvVVã°¢v¢Gƒ°¢6öÆ÷#¢&v&ƒ#SRÃ#SRÃ#SRÂãSR“°¢Ö&v–â×F÷¢3ƒ°¢FF–ær×F÷¢‡ƒ°¢&÷&FW"×F÷¢‚6öÆ–B&v&ƒ#SRÃ#SRÃ#SRÂã“°§Ð¢æFWF–ÂÖÖöFÅ¶†–FFVåÒ²F—7Æ“¢æöæS²Ð¢æFWF–ÂÖÖöFÂ°¢÷6—F–öã¢f—†VC°¢–ç6WC¢°¢¢Ö–æFWƒ¢3°§Ð¢æFWF–ÂÖ&6¶G&÷°¢÷6—F–öã¢'6öÇWFS°¢–ç6WC¢°¢&6¶w&÷VæC¢&v&ƒRÃbÃÂãc"“°¢&6¶G&÷Öf–ÇFW#¢&ÇW"ƒ‡‚“°§Ð¢æFWF–Â×æVÂ°¢÷6—F–öã¢&VÆF—fS°¢¢Ô–æFWƒ¢#°¢v–GFƒ¢Ö–âƒƒ‚Â6Æ2ƒRÒC‚’“°¢Ö‚Ö†V–v‡C¢Ö–âƒƒ‡f‚Â“#‚“°¢÷fW&fÆ÷s¢WFó°¢Ö&v–ã¢gf‚WFó°¢&÷&FW"×&F—W3¢#‡ƒ°¢&6¶w&÷VæC¢6ffc°¢F—7Æ“¢w&–C°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢Ö–æÖ‚ƒ3‚ÂC"R’Ö–æÖ‚ƒÂS‚R“°¢&÷‚×6†F÷s¢3‚s‚&v&ƒÃÃÂã#"“°§Ð¢æFWF–ÂÖ–ÖvR×w&²Ö–âÖ†V–v‡C¢S²&6¶w&÷VæC¢6VVc6V3²Ð¢æFWF–ÂÖ–ÖvR×w&–Ör²v–GFƒ¢S²†V–v‡C¢S²ö&¦V7BÖf—C¢6÷fW#²Ð¢æFWF–ÂÖ&öG’²FF–æs¢C'‚CG‚3gƒ²Ð¢æFWF–ÂÖ&öG’ƒ"²föçB×6—¦S¢6Æ×ƒ"ã'&VÒÂGgrÂBãG&VÒ“²Ö&v–âÖ&÷GFöÓ¢‡ƒ²Ð¢6FWF–Â×FW‡B²6öÆ÷#¢f"‚ÒÖ×WFVB“²föçB×6—¦S¢ã7&VÓ²Ð¢æFWF–ÂÖÆ—7B²Ö&v–ã¢#G‚²FF–æs¢²Æ—7B×7G–ÆS¢æöæS²Ð¢æFWF–ÂÖÆ—7BÆ’°¢÷6—F–öã¢&VÆF—fS°¢FF–æs¢G‚G‚#‡ƒ°¢6öÆ÷#¢3S#cV°¢&÷&FW"×F÷¢‚6öÆ–B&v&ƒ#2ÃsÃSÂã“°§Ð¢æFWF–ÂÖÆ—7BÆ“£¦&Vf÷&R°¢6öçFVçC¢.(
+"#°¢÷6—F–öã¢'6öÇWFS°¢ÆVgC¢‡ƒ°¢F÷¢ƒ°¢6öÆ÷#¢3f#†#sƒ°¢föçB×6—¦S¢ãg&VÓ°§Ð¢æFWF–ÂÖæ÷FR°¢Ö&v–â×F÷¢#ƒ°¢FF–æs¢G‚gƒ°¢&6¶w&÷VæC¢6cfcvc#°¢&÷&FW"×&F—W3¢gƒ°§Ð¢æFWF–ÂÖ7F–öç2°¢F—7Æ“¢fÆWƒ°¢fÆW‚×w&¢w&°¢v¢gƒ°¢Ö&v–â×F÷¢#Gƒ°§Ð¢æFWF–Â×6V6öæF'’°¢6öÆ÷#¢f"‚ÒÖw&VVâ“°¢&6¶w&÷VæC¢6ffc°¢&÷&FW#¢‚6öÆ–B&v&ƒ#2ÃsÃSÂãb“°§Ð¢æFWF–ÂÖ6Æ÷6R°¢÷6—F–öã¢'6öÇWFS°¢&–v‡C¢#ƒ°¢F÷¢#ƒ°¢¢Ö–æFWƒ¢S°¢v–GFƒ¢S'ƒ°¢†V–v‡C¢S'ƒ°¢&÷&FW"×&F—W3¢““—ƒ°¢&÷&FW#¢‚6öÆ–B&v&ƒ#2ÃsÃSÂã“°¢&6¶w&÷VæC¢&v&ƒ#SRÃ#SRÃ#SRÂã“B“°¢F—7Æ“¢w&–C°¢Æ6RÖ—FV×3¢6VçFW#°¢föçB×6—¦S¢ã—&VÓ°¢Æ–æRÖ†V–v‡C¢°¢6öÆ÷#¢3f3scs°¢&÷‚×6†F÷s¢'‚#G‚&v&ƒÃÃÂã“°§Ð¢æFWF–ÂÖ6Æ÷6R7â°¢F—7Æ“¢–æÆ–æRÖ&Æö6³°¢Æ–æRÖ†V–v‡C¢°¢G&ç6f÷&Ó¢G&ç6ÆFU’‚Ó‚“°§Ð¢æÖö&–ÆRÖ6ÆÂ°¢÷6—F–öã¢f—†VC°¢&–v‡C¢Ö‚ƒ‡‚ÂVçb‡6fRÖ&VÖ–ç6WB×&–v‡B’“°¢&÷GFöÓ¢6Æ2ƒ‡‚²Vçb‡6fRÖ&VÖ–ç6WBÖ&÷GFöÒ’“°¢¢Ö–æFWƒ¢“°¢Ö–âÖ†V–v‡C¢c'ƒ°¢FF–æs¢#'ƒ°¢&÷&FW"×&F—W3¢““—ƒ°¢&6¶w&÷VæC¢Æ–æV"Öw&F–VçBƒ3VFVrÂ3“S3‚Â3cfCb“°¢6öÆ÷#¢6ffc°¢F—7Æ“¢–æÆ–æRÖfÆWƒ°¢Æ–vâÖ—FV×3¢6VçFW#°¢v¢'ƒ°¢föçB×vV–v‡C¢ƒ°¢&÷‚×6†F÷s¢‡‚3G‚&v&ƒrÃCÃ3Âã#B“°§Ð¢æÖö&–ÆRÖ6ÆÂ7â°¢v–GFƒ¢3Gƒ°¢†V–v‡C¢3Gƒ°¢&÷&FW"×&F—W3¢““—ƒ°¢&6¶w&÷VæC¢&v&ƒ#SRÃ#SRÃ#SRÂãR“°¢F—7Æ“¢w&–C°¢Æ6RÖ—FV×3¢6VçFW#°§Ð¤ÖVF–†Ö‚×v–GFƒ¢ƒ‚’°¢æ†W&ò²Ö–âÖ†V–v‡C¢ƒ#ƒ²Ð¢ç6W'f–6RÖw&–BÀ¢æ6öÆÆV7F–öâÖw&–B²w&–B×FV×ÆFRÖ6öÇVÖç3¢&WVBƒ"ÂÖ–æÖ‚ƒÂg"’“²Ð¢ævÆÆW'’²w&–B×FV×ÆFRÖ6öÇVÖç3¢&WVBƒ"Âg"“²w&–BÖWFò×&÷w3¢#Cƒ²Ð¢æsÂæs"²w&–BÖ6öÇVÖã¢WFó²w&–B×&÷s¢WFó²Ð¢æFWF–Â×æVÂ²w&–B×FV×ÆFRÖ6öÇVÖç3¢g#²Ð¢æFWF–ÂÖ–ÖvR×w&²†V–v‡C¢3#ƒ²Ð§Ð¤ÖVF–†Ö‚×v–GFƒ¢ƒc‚’°¢§&ö÷B²Ò×w&¢Ö–âƒRÂ6Æ2ƒRÒ3'‚’“²Ð¢ç6V7F–öâ²FF–æs¢ƒG‚²Ð¢æ†VFW"Ö–ææW"²Ö–âÖ†V–v‡C¢“Gƒ²Ð¢æ'&æB²v¢Gƒ²Ð¢æ'&æBÖÖ&²²v–GFƒ¢SGƒ²†V–v‡C¢SGƒ²Ð¢æ'&æBÖ6÷’7G&öær²föçB×6—¦S¢ãC‡&VÓ²Ð¢æ'&æBÖ6÷’6ÖÆÂ²föçB×6—¦S¢ãs‡&VÓ²ÆWGFW"×76–æs¢ã†VÓ²Ð¢æÖVçR×FövvÆR²F—7Æ“¢–æÆ–æRÖfÆWƒ²Ð¢æÖ–âÖæb°¢÷6—F–öã¢f—†VC°¢ÆVgC¢°¢&–v‡C¢°¢F÷¢“Gƒ°¢&÷GFöÓ¢°¢¢Ö–æFWƒ¢“ƒ°¢&6¶w&÷VæC¢Æ–æV"Öw&F–VçBƒƒFVrÂ3sCRÂ3“#‚“°¢FF–æs¢#g‚#G‚#ƒ°¢fÆW‚ÖF—&V7F–öã¢6öÇVÖã°¢Æ–vâÖ—FV×3¢fÆW‚×7F'C°¢v¢‡ƒ°¢G&ç6f÷&Ó¢G&ç6ÆFU’‚Ó'‚“°¢÷6—G“¢°¢ö–çFW"ÖWfVçG3¢æöæS°¢G&ç6—F–öã¢÷6—G’ã#W2V6RÂG&ç6f÷&Òã#W2V6S°¢÷fW&fÆ÷s¢WFó°¢Ð¢æÖ–âÖæbâ°¢6öÆ÷#¢6ffc°¢föçB×6—¦S¢ã'&VÓ°¢v–GFƒ¢S°¢FF–æs¢‚°¢&÷&FW"×&F—W3¢°¢&6¶w&÷VæC¢æöæR–×÷'FçC°¢Ð¢æÖ–âÖæbâææbÖ7F°¢Ö&v–â×F÷¢ƒ°¢v–GFƒ¢WFó°¢FF–æs¢G‚#'ƒ°¢&÷&FW"×&F—W3¢““—ƒ°¢6öÆ÷#¢f"‚ÒÖw&VVâ“°¢&6¶w&÷VæC¢6ffb–×÷'FçC°¢&÷&FW#¢°¢Ð¢&öG’æÖVçRÖ÷VâæÖ–âÖæb²÷6—G“¢²ö–çFW"ÖWfVçG3¢WFó²G&ç6f÷&Ó¢G&ç6ÆFU’ƒ“²Ð¢æÖö&–ÆRÖæbÖW‡G&°¢F—7Æ“¢w&–C°¢v¢#Gƒ°¢v–GFƒ¢S°¢Ö&v–â×F÷¢‡ƒ°¢FF–ær×F÷¢#'ƒ°¢&÷&FW"×F÷¢‚6öÆ–B&v&ƒ#SRÃ#SRÃ#SRÂã"“°¢Ð¢æÖö&–ÆRÖæbÖW‡G&À¢æÖö&–ÆRÖæbÖ6öçF7BÀ¢æÖö&–ÆRÖæbÖÆVvÂ²6öÆ÷#¢&v&ƒ#SRÃ#SRÃ#SRÂãƒ"“²Ð¢æÖö&–ÆRÖæbÖ6öçF7BÀ¢æÖö&–ÆRÖæbÖÆVvÂ²F—7Æ“¢w&–C²v¢'ƒ²Ð¢&öG’æÖVçRÖ÷Vâ²÷fW&fÆ÷s¢†–FFVã²Ð¢æ†W&ò°¢Ö–âÖ†V–v‡C¢WFó°¢FF–ærÖ&÷GFöÓ¢°¢Ð¢æ†W&òÖ6öçFVçB°¢FF–æs¢“g‚Sgƒ°¢Ð¢æ†W&òÖ6öçFVçBâ¢²Ö‚×v–GFƒ¢S²Ð¢æ†W&òƒ²föçB×6—¦S¢6Æ×ƒ7&VÒÂGgrÂW&VÒ“²Ð¢æ†W&ò×&ööb°¢÷6—F–öã¢&VÆF—fS°¢v–GFƒ¢f"‚Ò×w&“°¢ÆVgC¢WFó°¢&–v‡C¢WFó°¢&÷GFöÓ¢WFó°¢G&ç6f÷&Ó¢æöæS°¢Ö&v–ã¢Ó#g‚WFò°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢g#°¢Ð¢ç&ööbÖ—FVÒ²Ö–âÖ†V–v‡C¢ƒ²Ð¢ç&ööbÖ—FVÓ¦æ÷Bƒ¦Æ7BÖ6†–ÆB“£¦gFW"°¢&–v‡C¢#Gƒ°¢ÆVgC¢#Gƒ°¢F÷¢WFó°¢&÷GFöÓ¢°¢v–GFƒ¢WFó°¢†V–v‡C¢ƒ°¢Ð¢æ–çG&ò²FF–ær×F÷¢sGƒ²Ð¢æ–çG&òÖw&–BÀ¢æ&÷WBÖw&–BÀ¢æ6öçF7B×6†VÆÂÀ¢æfö÷FW"Öw&–BÀ¢ç6V7F–öâÖ†VBÀ¢çf—6—BÖ6&B²w&–B×FV×ÆFRÖ6öÇVÖç3¢g#²F—7Æ“¢w&–C²Ð¢æ–çG&òÖ6÷’À¢æ&÷WBÖ6÷’²§W7F–g’×6VÆc¢7G&WF6ƒ²Ö‚×v–GFƒ¢S²Ð¢ç6V7F–öâÖ†VB²Æ–vâÖ—FV×3¢7F'C²Ð¢ç6W'f–6RÖw&–B²w&–B×FV×ÆFRÖ6öÇVÖç3¢g#²Ð¢çf—7VÂÖ'&V²²Ö–âÖ†V–v‡C¢3ƒƒ²&6¶w&÷VæB×÷6—F–öã¢6VçFW#²Ð¢çf—7VÂÖ'&V²Ö6&B°¢Ö&v–ã¢WFò#'ƒ°¢v–GFƒ¢f"‚Ò×w&“°¢Ð¢æ6öÆÆV7F–öâÖw&–B°¢F—7Æ“¢w&–C°¢w&–BÖWFòÖfÆ÷s¢6öÇVÖã°¢w&–BÖWFòÖ6öÇVÖç3¢Ö–æÖ‚ƒ#“‚Âƒ'gr“°¢÷fW&fÆ÷r×ƒ¢WFó°¢÷fW'67&öÆÂÖ&V†f–÷"×ƒ¢6öçF–ã°¢67&öÆÂ×6æ×G—S¢‚&÷†–Ö—G“°¢v¢Gƒ°¢FF–ærÖ&÷GFöÓ¢ƒ°¢Ö&v–â×&–v‡C¢Ógƒ°¢Ð¢æ6öÆÆV7F–öâÖ6&B²67&öÆÂ×6æÖÆ–vã¢7F'C²Ð¢æ6öÆÆV7F–öâÖ–ÖvR²†V–v‡C¢#3ƒ²Ð¢çf—6—BÖ6&B²v¢#ƒ²Ð¢çf—6—BÖ7F–öç2²§W7F–g’Ö6öçFVçC¢fÆW‚×7F'C²Ð¢ævÆÆW'’°¢v–GFƒ¢f"‚Ò×w&“°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢g#°¢w&–BÖWFò×&÷w3¢#Sƒ°¢Ð¢æ&÷WBÖ–ÖvR×w&²Ö&v–ã¢WFó²v–GFƒ¢S²Ð¢æW‡W&–Væ6RÖ&FvR°¢v–GFƒ¢sƒ°¢†V–v‡C¢sƒ°¢&–v‡C¢gƒ°¢&÷GFöÓ¢gƒ°¢Ð¢æW‡W&–Væ6RÖ&FvR7G&öær²föçB×6—¦S¢7&VÓ²Ð¢æVævvVÖVçBÖ6&B²FF–æs¢#'‚#'‚#'‚s‡ƒ²Ð¢æ6öçF7BÖ–æfòÀ¢æ6öçF7BÖf÷&ÒÀ¢æFWF–ÂÖ&öG’²FF–æs¢#‡‚#'ƒ²Ð¢æf÷&Ò×&÷r²w&–B×FV×ÆFRÖ6öÇVÖç3¢g#²Ð¢æFWF–Â×æVÂ°¢v–GFƒ¢Ö–âƒRÒ#‚Âs#‚“°¢Ö&v–ã¢‚WFó°¢Ö‚Ö†V–v‡C¢6Æ2ƒf‚Ò#‚“°¢Ð¢æFWF–ÂÖ–ÖvR×w&²†V–v‡C¢#cƒ²Ð¢æfö÷FW"Ö&÷GFöÒ²fÆW‚ÖF—&V7F–öã¢6öÇVÖã²Ð¢æÖö&–ÆRÖ6ÆÂ°¢Ö–âÖ†V–v‡C¢cƒ°¢FF–æs¢#ƒ°¢Ð§Ð¤ÖVF–†Ö‚×v–GFƒ¢S#‚’°¢ƒ"²föçB×6—¦S¢6Æ×ƒ"ãW&VÒÂ'grÂ2ãW&VÒ“²Ð¢æ'&æBÖ6÷’7G&öær²föçB×6—¦S¢ã'&VÓ²Ð¢æ'&æBÖ6÷’6ÖÆÂ²föçB×6—¦S¢ãc‡&VÓ²Ð¢æ†W&òÖ7F–öç2²fÆW‚ÖF—&V7F–öã¢6öÇVÖã²Æ–vâÖ—FV×3¢7G&WF6ƒ²Ð¢æ'FâÀ¢æFWF–ÂÖ7F–öç2æ'Fâ²v–GFƒ¢S²Ð¢æ'FâÖv†÷7B²§W7F–g’Ö6öçFVçC¢6VçFW#²Ð¢æ6öÆÆV7F–öâÖw&–B²w&–BÖWFòÖ6öÇVÖç3¢ƒggs²Ð¢æ6öÆÆV7F–öâÖ6÷’²FF–æs¢#'ƒ²Ð¢çf—6—BÖ6&B²FF–æs¢#Gƒ²Ð¢çf—6—BÖ6&Bƒ2²föçB×6—¦S¢"ãW&VÓ²Ð¢ævÆÆW'’f–v6F–öâ²ÆVgC¢Gƒ²&÷GFöÓ¢Gƒ²föçB×6—¦S¢ã“W&VÓ²Ð¢æ÷Væ–ærÖ†÷W'2F—b²fÆW‚ÖF—&V7F–öã¢6öÇVÖã²Ð¢æÖö&–ÆRÖ6ÆÂ²ÆVgC¢gƒ²&–v‡C¢gƒ²§W7F–g’Ö6öçFVçC¢6VçFW#²Ð§Ð ¢ò¢Öö&–ÆW"fW'6–öç2"f—ƒ¢¶V–æR9Æ&W&'&V—FRÂG&W76R–âV–æW"¦V–ÆRÂ7F&–ÆRFWF–Æç6–6‡FVâ¢ð¤–ÖVF–†Ö‚×v–GFƒ¢ƒc‚’°¢¦‡FÖÂÀ¢&öG’°¢v–GFƒ¢S°¢Ö‚×v–GFƒ¢S°¢÷fW&fÆ÷r×ƒ¢†–FFVã°¢Ð¢–Ör°¢Ö‚×v–GFƒ¢S°¢Ð¢æ†W&òÀ¢æ†W&òÖÖVF–À¢æ†W&òÖ÷fW&Æ’À¢æ†W&òÖ6öçFVçBÀ¢æ†W&ò×&ööbÀ¢ç6—FRÖ†VFW"À¢ç6—FRÖfö÷FW"À¢æÖ–âÖæbÀ¢æFWF–ÂÖÖöFÂÀ¢ævÆÆW'’×6V7F–öâÀ¢æW††–&—F–öâ°¢Ö‚×v–GFƒ¢gs°¢÷fW&fÆ÷r×ƒ¢†–FFVã°¢Ð¢ç&ööbÖ—FVÒ°¢Ö–â×v–GFƒ¢°¢÷fW&fÆ÷s¢†–FFVã°¢Ð¢ç&ööbÖFG&W72°¢FF–ærÖÆVgC¢#gƒ°¢FF–ær×&–v‡C¢#gƒ°¢Ð¢ç&ööbÖFG&W727G&öær°¢F—7Æ“¢&Æö6³°¢Ö‚×v–GFƒ¢S°¢v†—FR×76S¢æ÷w&°¢föçB×6—¦S¢6Æ×ƒãCW&VÒÂbãWgrÂ'&VÒ“°¢Æ–æRÖ†V–v‡C¢ãƒ°¢ÆWGFW"×76–æs¢Òã#VVÓ°¢Ð¢ç&ööbÖFG&W72â7â°¢F—7Æ“¢&Æö6³°¢Ö‚×v–GFƒ¢S°¢v†—FR×76S¢æ÷&ÖÃ°¢÷fW&fÆ÷r×w&¢ç—v†W&S°¢Æ–æRÖ†V–v‡C¢ã3S°¢Ð¢æFWF–Â×æVÂ°¢v–GFƒ¢6Æ2ƒRÒ#G‚“°¢Ö‚×v–GFƒ¢6Æ2ƒRÒ#G‚“°¢Ö&v–ã¢'‚WFó°¢÷fW&fÆ÷r×ƒ¢†–FFVã°¢Ð¢æFWF–ÂÖ–ÖvR×w&°¢†V–v‡C¢#CWƒ°¢Ð¢æFWF–ÂÖ–ÖvR×w&–Ör°¢v–GFƒ¢S°¢†V–v‡C¢S°¢ö&¦V7BÖf—C¢6÷fW#°¢Ð¢æFWF–ÂÖ&öG’°¢Ö–â×v–GFƒ¢°¢Ð¢ævÆÆW'’À¢ævÆÆW'’f–wW&RÀ¢æ&÷WBÖw&–BÀ¢æ6öçF7B×6†VÆÂÀ¢çf—6—BÖ6&B°¢Ö–â×v–GFƒ¢°¢Ö‚×v–GFƒ¢S°¢Ð§Ð ¤ÖVF–†Ö‚×v–GFƒ¢S#‚’°¢§&ö÷B°¢Ò×w&¢6Æ2ƒRÒ3'‚“°¢Ð¢æ†VFW"Ö–ææW"À¢æ†W&òÖ6öçFVçBÀ¢æ–çG&òçw&À¢ç6W'f–6W2çw&À¢æW††–&—F–öâçw&À¢ævÆÆW'’×6V7F–öâçw&À¢æ&÷WBçw&À¢æ6öçF7Bçw&À¢æÆVvÂçw&À¢ç6—FRÖfö÷FW"çw&°¢v–GFƒ¢6Æ2ƒRÒ3'‚“°¢Ö‚×v–GFƒ¢6Æ2ƒRÒ3'‚“°¢Ö&v–âÖÆVgC¢WFó°¢Ö&v–â×&–v‡C¢WFó°¢Ð¢æ†W&ò×&ööb°¢v–GFƒ¢6Æ2ƒRÒ3'‚“°¢Ö‚×v–GFƒ¢6Æ2ƒRÒ3'‚“°¢Ð¢ç&ööbÖ—FVÒ°¢FF–ærÖÆVgC¢#'ƒ°¢FF–ær×&–v‡C¢#'ƒ°¢Ð¢ç&ööbÖFG&W727G&öær°¢föçB×6—¦S¢6Æ×ƒã3W&VÒÂggrÂãs'&VÒ“°¢Ð¢ç&ööbÖFG&W72â7â°¢föçB×6—¦S¢ã“g&VÓ°¢Ð¢æFWF–Â×æVÂ°¢v–GFƒ¢6Æ2ƒRÒg‚“°¢Ö‚×v–GFƒ¢6Æ2ƒRÒg‚“°¢Ö&v–ã¢‡‚WFó°¢Ö‚Ö†V–v‡C¢6Æ2ƒf‚Òg‚“°¢Ð¢æFWF–ÂÖ–ÖvR×w&°¢†V–v‡C¢##ƒ°¢Ð§Ð ¢ò¢fW'6–öâ3¢7F&–ÆW"FW6·F÷VæBvV"fV–ç66†Æ–fb¢ð¤ÖVF–†Ö–â×v–GFƒ¢ƒc‚’°¢§&ö÷B°¢Ò×w&¢Ö–âƒ#C‚Â6Æ2ƒRÒs'‚’“°¢Ð ¢‡FÖÂÀ¢&öG’°¢v–GFƒ¢S°¢Ö‚×v–GFƒ¢S°¢÷fW&Æ÷r×ƒ¢†–FFVã°¢Ð ¢çw&À¢æ†VFW"Ö–ææW"À¢æ†W&òÖ6öçFVçBÀ¢æ†W&ò×&ööbÀ¢æ–çG&òÖw&–BÀ¢ç6V7F–öâÖ†VBÀ¢ç6W'f–6RÖw&–BÀ¢æ6öÆÆV7F–öâÖw&–BÀ¢ævÆÆW'’À¢æ&÷WBÖw&–BÀ¢æ6öçF7B×6†VÆÂÀ¢æfö÷FW"Öw&–B°¢Ö–â×v–GFƒ¢°¢Ð ¢ç6—FRÖ†VFW"°¢v–GFƒ¢S°¢Ð ¢æ†VFW"Ö–ææW"°¢Ö–âÖ†V–v‡C¢“'ƒ°¢v¢3ƒ°¢Ð ¢æ'&æB°¢fÆWƒ¢WFó°¢Ð ¢æ'&æBÖÖ&²°¢v–GFƒ¢SGƒ°¢†V–v‡C¢SGƒ°¢Ð ¢æ'&æBÖ6÷’7G&öær°¢föçB×6—¦S¢6Æ×ƒãSW&VÒÂ'grÂ'&VÒ“°¢Ð ¢æ'&æBÖ6÷’6ÖÆÂ°¢föçB×6—¦S¢ãs‡&VÓ°¢ÆWGFW"×76–æs¢ã–VÓ°¢Ð ¢æÖ–âÖæb°¢fÆWƒ¢WFó°¢v¢Gƒ°¢v†—FR×76S¢æ÷w&°¢Ð ¢æÖ–âÖæbâ°¢FF–æs¢‚'ƒ°¢föçB×6—¦S¢ã“G&VÓ°¢Ð ¢æÖ–âÖæbâææbÖ7F°¢FF–æs¢‚‡ƒ°¢Ö&v–âÖÆVgC¢Gƒ°¢Ð ¢æ†W&ò°¢Ö–âÖ†V–v‡C¢scƒ°¢Ð ¢æ†W&òÖ6öçFVçB°¢FF–ær×F÷¢ƒ‡ƒ°¢FF–ærÖ&÷GFöÓ¢#Wƒ°¢Ð ¢æ†W&òÖ6öçFVçBâ¢°¢Ö‚×v–GFƒ¢c#ƒ°¢Ð ¢æ†W&òƒ°¢föçB×6—¦S¢6Æ×ƒBãW&VÒÂbã'grÂbã'&VÒ“°¢Ö‚×v–GFƒ¢cƒ°¢Ð ¢æ†W&òÖÆVB°¢Ö‚×v–GFƒ¢c#ƒ°¢föçB×6—¦S¢6Æ×ƒãG&VÒÂã3WgrÂã#W&VÒ“°¢Ð ¢ò¢F–R–æfö¶'FR&ÆV–'BföÆÇ7L:FæF–r–Ò†W&òVæB;Æ&W'66†æV–FWB¶V–æVâföÆvV'66†æ—GBâ¢ð¢æ†W&ò×&ööb°¢&÷GFöÓ¢3gƒ°¢G&ç6f÷&Ó¢G&ç6ÆFU‚‚ÓSR“°¢v–GFƒ¢Ö–âƒ#‚Â6Æ2ƒRÒs'‚’“°¢Ð ¢ç&ööbÖ—FVÒ°¢Ö–âÖ†V–v‡C¢#'ƒ°¢FF–æs¢#G‚3ƒ°¢÷fW&fÆ÷s¢†–FFVã°¢Ð ¢ç&ööbÖ—FVÒ7G&öær°¢föçB×6—¦S¢6Æ×ƒãsW&VÒÂ"ã'grÂ"ãG&VÒ“°¢Æ–æRÖ†V–v‡C¢ãS°¢Ð ¢ç&ööbÖFG&W727G&öær°¢v†—FR×76S¢æ÷&ÖÃ°¢÷fW&fÆ÷r×w&¢æ÷&ÖÃ°¢Ð ¢æ–çG&ò°¢FF–ær×F÷¢Gƒ°¢Ð ¢ç6V7F–öâ°¢FF–ær×F÷¢ƒ‡ƒ°¢FF–ærÖ&÷GFöÓ¢ƒ‡ƒ°¢Ð ¢æ–çG&òÖw&–BÀ¢æ&÷WBÖw&–B°¢v¢6Æ×ƒC'‚ÂWgrÂsg‚“°¢Æ–vâÖ—FV×3¢6VçFW#°¢Ð ¢æ–çG&òÖw&–Bâ¢À¢æ&÷WBÖw&–Bâ¢À¢ç6V7F–öâÖ†VBâ¢À¢æ6öçF7B×6†VÆÂâ¢°¢Ö–â×v–GFƒ¢°¢Ð ¢æ–çG&òƒ"À¢ç6V7F–öâÖ†VBƒ"À¢æ&÷WBÖ6÷’ƒ"À¢æ6öçF7Bƒ"°¢÷fW&fÆ÷r×w&¢æ÷&ÖÃ°¢v÷&BÖ'&V³¢æ÷&ÖÃ°¢Ð ¢ç6V7F–öâÖ†VB°¢F—7Æ“¢w&–C°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢Ö–æÖ‚ƒÂãCVg"’Ö–æÖ‚ƒ#ƒ‚ÂãSVg"“°¢Æ–vâÖ—FV×3¢VæC°¢v¢C‡ƒ°¢Ð ¢ç6V7F–öâÖ†VBâ°¢§W7F–g’×6VÆc¢VæC°¢Ö‚×v–GFƒ¢3“ƒ°¢Ð ¢ç6W'f–6RÖw&–B°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢&WVBƒ2ÂÖ–æÖ‚ƒÂg"’“°¢v¢‡ƒ°¢Ð ¢ç6W'f–6RÖ6&B°¢Ö–â×v–GFƒ¢°¢Ö–âÖ†V–v‡C¢#C‡ƒ°¢FF–æs¢3ƒ°¢Ð ¢ç6W'f–6RÖ6&Bƒ2À¢æ6öÆÆV7F–öâÖ6&Bƒ2°¢÷fW&fÆ÷r×w&¢æ÷&ÖÃ°¢v÷&BÖ'&V³¢æ÷&ÖÃ°¢Ð ¢çf—7VÂÖ'&V²°¢Ö–âÖ†V–v‡C¢Sƒ°¢Ð ¢çf—7VÂÖ'&V²Ö6&B°¢Ö&v–âÖÆVgC¢Ö‚ƒ3g‚Â6Æ2‚ƒgrÒÖ–âƒ#C‚Â6Æ2ƒgrÒs'‚’’’ò"’“°¢Ö&v–âÖ&÷GFöÓ¢3gƒ°¢Ð ¢ò¢W2v–'BçW"æö6‚§vV’W77FVÆÇVæw6¶'FVââVb2çWG¦Vâ6–RF–R'&V—FRW6vWvövVââ¢ð¢æ6öÆÆV7F–öâÖw&–B°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢&WVBƒ"ÂÖ–æÖ‚ƒÂg"’“°¢v¢#Gƒ°¢Ð ¢æ6öÆÆV7F–öâÖ6&B°¢Ö–â×v–GFƒ¢°¢Ð ¢æ6öÆÆV7F–öâÖ–ÖvR°¢†V–v‡C¢6Æ×ƒ#ƒ‚Â#‡grÂ3c‚“°¢Ð ¢æ6öÆÆV7F–öâÖ6÷’°¢FF–æs¢3‚3'‚3'ƒ°¢Ð ¢çf—6—BÖ6&B°¢Æ–vâÖ—FV×3¢6VçFW#°¢v¢3gƒ°¢Ð ¢çf—6—BÖ6&Bâ¢°¢Ö–â×v–GFƒ¢°¢Ð ¢çf—6—BÖ7F–öç2°¢Ö‚×v–GFƒ¢Cƒƒ°¢Ð ¢ævÆÆW'’°¢v–GFƒ¢Ö–âƒ#ƒ‚Â6Æ2ƒRÒs'‚’“°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢ã&g"g"g#°¢w&–BÖWFò×&÷w3¢#CWƒ°¢v¢gƒ°¢Ð ¢ævÆÆW'’f–wW&RÀ¢ævÆÆW'’–Ör°¢Ö–â×v–GFƒ¢°¢Ð ¢æ&÷WBÖ–ÖvR×w&°¢Ö–â×v–GFƒ¢°¢Ð ¢æ&÷WBÖ6÷’°¢Ö‚×v–GFƒ¢Scƒ°¢Ð ¢æW‡W&–Væ6RÖ&FR°¢v–GFƒ¢“ƒ°¢†V–v‡C¢“ƒ°¢Ð ¢æW‡W&–Væ6RÖ&FR7G&öær°¢föçB×6—¦S¢2ãW&VÓ°¢Ð ¢æ6öçF7B×6†VÆÂ°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢Ö–æÖ‚ƒÂg"’Ö–æÖ‚ƒÂg"“°¢Ð ¢æ6öçF7BÖ–æfòÀ¢æ6öçF7BÖf÷&Ò°¢Ö–â×v–GFƒ¢°¢FF–æs¢6Æ×ƒ3G‚Â2ãGgrÂS‚“°¢Ð ¢æ6öçF7BÖÆ—7B7G&öærÀ¢æ6öçF7BÖÆ—7BÀ¢æ÷Væ–ærÖ†÷W'2À¢æf÷&ÒÖæ÷FR°¢÷fW&fÆ÷r×w&¢ç—v†W&S°¢Ð ¢æfö÷FW"Öw&–B°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢Ö–æÖ‚ƒ#ƒ‚Âã#Vg"’&WVBƒ2ÂÖ–æÖ‚ƒS‚ÂãcVg"’“°¢v¢6Æ×ƒ#G‚Â7grÂCg‚“°¢Ð ¢ò¢FW"66‡vV&VæFRç'Vb'WGFöâ—7BçW"l;Ç"Öö&–ÆvW,:GFRvVF6‡Bâ¢ð¢æÖö&–ÆRÖ6ÆÂ°¢F—7Æ“¢æöæS°¢Ð ¢æFWF–Â×æVÂ°¢v–GFƒ¢Ö–âƒ‚Â6Æ2ƒRÒs'‚’“°¢Ö‚Ö†V–v‡C¢6Æ2ƒf‚Òs'‚“°¢Ö&v–ã¢3g‚WFó°¢w&–B×FV×ÆFRÖ6öÇVÖç3¢Ö–æÖ‚ƒ3c‚ÂC"R’Ö–æÖ‚ƒÂS‚R“°¢÷fW&fÆ÷s¢†–FFVã°¢Ð ¢æFWF–ÂÖ–ÖvR×w&°¢Ö–âÖ†V–v‡C¢Scƒ°¢†V–v‡C¢WFó°¢Ð ¢æFWF–ÂÖ&öG’°¢Ö–â×v–GFƒ¢°¢÷fW&fÆ÷r×“¢WFó°¢Ö‚Ö†V–v‡C¢6Æ2ƒf‚Òs'‚“°¢FF–æs¢CG‚Cg‚3‡ƒ°¢Ð ¢æFWF–ÂÖ7F–öç2æ'Fâ°¢v–GFƒ¢WFó°¢Ð§Ð ¢ò¢¶ÆV–æRÆF÷3¢æf–vF–öâVæBG—öw&f–RWGv2¶ö×·FW"Âö†æR9Æ&W&ÆVærâ¢ð¤ÖVF–†Ö–â×v–GFƒ¢ƒc‚’æB†Ö‚×v–GFƒ¢#‚’°¢§&ö÷B°¢Ò×w&¢Ö–âƒRÂ6Æ2ƒRÒCG‚’“°¢Ð ¢æ†VFW"Ö–ææW"°¢v¢gƒ°¢Ð ¢æ'&æB°¢v¢'ƒ°¢Ð ¢æ'&æBÖÖ&²°¢v–GFƒ¢Cgƒ°¢†V–v‡C¢Cgƒ°¢Ð ¢æ'&æBÖ6÷’7G&öær°¢föçB×6—¦S¢ã3W&VÓ°¢Ð ¢æ'&æBÖ6÷’6ÖÆÂ°¢föçB×6—¦S¢ãcG&VÓ°¢ÆWGFW"×76–æs¢ãFVÓ°¢Ð ¢æÖ–âÖæb°¢v¢°¢Ð ¢æÖ–âÖæbâ°¢FF–æs¢—‚‡ƒ°¢föçB×6—¦S¢ãƒ'&VÓ°¢Ð ¢æÖ–âÖæbâææbÖ7F°¢FF–æs¢‚7ƒ°¢Ð ¢æ†W&òƒ°¢föçB×6—¦S¢6Æ×ƒG&VÒÂwgrÂRã'&VÒ“°¢Ð ¢æ†W&ò×&ööb°¢v–GFƒ¢6Æ2ƒRÒCG‚“°¢Ð ¢ç&ööbÖ—FVÒ°¢FF–ærÖÆVgC¢#'ƒ°¢FF–ær×&–v‡C¢#'ƒ°¢Ð ¢ç6V7F–öâÖ†VB°¢v¢3ƒ°¢Ð ¢ç6W'f–6RÖ6&B°¢FF–æs¢#g‚#Gƒ°¢Ð ¢ævÆÆW'’°¢v–GFƒ¢6Æ2ƒRÒCG‚“°¢Ð§Ð
