@@ -1,0 +1,98 @@
+
+
+/* Version 14: zusaetzliche Desktop Stabilitaet fuer Verkaufsversion */
+@media (min-width: 861px) {
+  section[id], details[id] {
+    scroll-margin-top: 112px;
+  }
+
+  .header-inner,
+  .main-nav,
+  .hero-content,
+  .hero-proof,
+  .intro-grid,
+  .section-head,
+  .service-grid,
+  .collection-grid,
+  .gallery,
+  .about-grid,
+  .contact-shell,
+  .footer-grid {
+    max-width: 100%;
+  }
+
+  .header-inner > *,
+  .main-nav > *,
+  .hero-proof > *,
+  .intro-grid > *,
+  .service-grid > *,
+  .collection-grid > *,
+  .about-grid > *,
+  .contact-shell > *,
+  .footer-grid > * {
+    min-width: 0;
+  }
+
+  .brand-copy,
+  .proof-item,
+  .visit-card,
+  .contact-info,
+  .contact-form {
+    min-width: 0;
+  }
+
+  .brand-copy strong,
+  .brand-copy small {
+    max-width: 100%;
+  }
+
+  .proof-address strong {
+    font-size: clamp(1.55rem, 2vw, 2.25rem);
+    line-height: 1.08;
+  }
+
+  .proof-address span,
+  .proof-reviews span,
+  .proof-experience span {
+    line-height: 1.35;
+  }
+
+  .visit-card h3 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    min-width: 0;
+  }
+}
+
+@media (min-width: 861px) and (max-width: 1020px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .brand-copy strong {
+    font-size: 1.2rem;
+  }
+
+  .brand-copy small {
+    font-size: .58rem;
+    letter-spacing: .12em;
+  }
+
+  .main-nav > a {
+    padding-inline: 7px;
+    font-size: .78rem;
+  }
+
+  .proof-item {
+    padding-inline: 18px;
+  }
+
+  .proof-address strong {
+    font-size: 1.42rem;
+  }
+}
